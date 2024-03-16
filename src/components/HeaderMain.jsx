@@ -45,7 +45,7 @@ const HeaderMain = () => {
                             </Link>
                         </nav>
                         <div className="main-header-cart">
-                            <img className="cart" onClick={toggleSidebar} src="../../public/cart.svg" alt="" />
+                            <img className="cart" onClick={toggleSidebar} src="./cart.svg" alt="../../public/cart.svg" />
                             <div className={sidebarActive ? 'sidebar active' : 'sidebar'} id="sidebar">
                                 <div className="sidebar-container">
                                     <div className="sidebar-top">

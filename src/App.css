@@ -310,7 +310,8 @@ div.slide-img img {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow.svg");
+  /* background-image: url("../public/arrow.svg"); */
+  background-image: url("./arrow.svg");
   background-position: 85% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1111,7 +1112,8 @@ div.slide-img img {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow.svg");
+  /* background-image: url("../public/arrow.svg"); */
+  background-image: url("./arrow.svg");
   background-position: 75% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1133,7 +1135,8 @@ div.slide-img img {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow2.svg");
+  /* background-image: url("../public/arrow2.svg"); */
+  background-image: url("./arrow2.svg");
   background-position: 85% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1725,7 +1728,8 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow.svg");
+  /* background-image: url("../public/arrow.svg"); */
+  background-image: url("./arrow.svg");
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1748,7 +1752,8 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow.svg");
+  background-image: url("./arrow.svg");
+  /* background-image: url("../public/arrow.svg"); */
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1878,7 +1883,8 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("../public/arrow.svg");
+  background-image: url("./arrow.svg");
+  /* background-image: url("../public/arrow.svg"); */
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;

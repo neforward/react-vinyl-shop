@@ -13,6 +13,7 @@ const Checkout = () => {
                                 <h3>CONTACT INFORMATION</h3>
                                 <p>We'll use this email to send you details and updates about your order.</p>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -22,3 +23,4 @@ const Checkout = () => {
 }
 
 export default Checkout
+
