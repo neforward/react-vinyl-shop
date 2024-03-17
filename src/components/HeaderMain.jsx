@@ -172,7 +172,7 @@ const HeaderMain = () => {
                                             <Link to='/cart'>
                                                 <button className="cart-btn">Veiw my cart</button>
                                             </Link>
-                                            <Link to='checkout'>
+                                            <Link to='/checkout'>
                                                 <button className="checkout">Cart to checkout</button>
                                             </Link>
                                         </div>
