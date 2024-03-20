@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import ArrowTop from "../components/ArrowTop"
 import Footer from "../components/Footer"
 import HeaderMain from "../components/HeaderMain"
@@ -20,7 +21,10 @@ const Shop = () => {
                     <div className="shop-items">
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -29,7 +33,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -38,7 +45,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -47,7 +57,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -56,7 +69,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -65,7 +81,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -74,7 +93,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -83,7 +105,10 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
@@ -92,13 +117,17 @@ const Shop = () => {
                         </div>
                         <div className="shop-item">
                             <div className="shop-item-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                <Link to='/product'>
+                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
+                                </Link>
+                                <button className="btn">Add to cart</button>
                             </div>
                             <div className="shop-item-text">
                                 <h2>WHITE CHEESE</h2>
                                 <h5>$65.00</h5>
                             </div>
                         </div>
+
                     </div>
                     <ArrowTop />
                 </div>

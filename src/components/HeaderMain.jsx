@@ -1,23 +1,49 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-const HeaderMain = () => {
 
+const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
+    const [sidebarActive, setSidebarActive] = useState(false);
+    const [cartItems, setCartItems] = useState([{ quantity: 1 }, { quantity: 1 }, { quantity: 1 }]);
+
     const toggleMenu = () => {
         setIsActive(!isActive);
-    }
+    };
 
-    const [sidebarActive, setSidebarActive] = useState(false);
     const toggleSidebar = () => {
         setSidebarActive(!sidebarActive);
+    };
 
-        if (!sidebarActive) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
+    const incrementItemCount = (index) => {
+        const updatedCartItems = [...cartItems];
+        updatedCartItems[index].quantity += 1;
+        setCartItems(updatedCartItems);
+    };
+
+    const decrementItemCount = (index) => {
+        const updatedCartItems = [...cartItems];
+        if (updatedCartItems[index].quantity > 1) {
+            updatedCartItems[index].quantity -= 1;
+            setCartItems(updatedCartItems);
         }
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            const sidebar = document.getElementById('sidebar');
+            const cartIcon = document.querySelector('.main-header-cart');
+            if (sidebarActive && sidebar && !sidebar.contains(event.target) && !cartIcon.contains(event.target)) {
+                toggleSidebar();
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [sidebarActive]);
 
     return (
         <>
@@ -49,116 +75,45 @@ const HeaderMain = () => {
                             <div className={sidebarActive ? 'sidebar active' : 'sidebar'} id="sidebar">
                                 <div className="sidebar-container">
                                     <div className="sidebar-top">
-                                        <h2>YOUR CART (1 ITEM)</h2>
+                                        <h2>YOUR CART ({cartItems.length} ITEM{cartItems.length !== 1 ? 'S' : ''})</h2>
                                         <IoMdClose size={30} onClick={toggleSidebar} />
                                     </div>
                                     <div className="bought-items">
-                                        <div className="bought-item">
-                                            <div className="bought-item-img">
-                                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
-                                            </div>
-                                            <div className="bought-item-info">
-
-                                                <div className="bought-item-name">
-                                                    <h6>Cheese cream</h6>
+                                        {cartItems.map((item, index) => (
+                                            <div className="bought-item" key={index}>
+                                                <div className="bought-item-img">
+                                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
                                                 </div>
-                                                <div className="bought-item-price">
-                                                    <h5>$40.00</h5>
-                                                </div>
-                                                <div className="bought-item-des">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
-                                                </div>
-                                                <div className="bought-flex">
-                                                    <div className="bought-item-plus-minus">
-                                                        <div className="btn-minus">
-                                                            <button>-</button>
+                                                <div className="bought-item-info">
+                                                    <div className="bought-item-name">
+                                                        <h6>Cheese cream</h6>
+                                                    </div>
+                                                    <div className="bought-item-price">
+                                                        <h5>$40.00</h5>
+                                                    </div>
+                                                    <div className="bought-item-des">
+                                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
+                                                    </div>
+                                                    <div className="bought-flex">
+                                                        <div className="bought-item-plus-minus">
+                                                            <div className="btn-minus">
+                                                                <button onClick={() => decrementItemCount(index)}>-</button>
+                                                            </div>
+                                                            <div className="total-sum">
+                                                                <input type="number" value={item.quantity} readOnly />
+                                                            </div>
+                                                            <div className="btn-plus">
+                                                                <button onClick={() => incrementItemCount(index)}>+</button>
+                                                            </div>
                                                         </div>
-                                                        <div className="total-sum">
-                                                            <input type="number" />
-                                                        </div>
-                                                        <div className="btn-plus">
-                                                            <button>+</button>
+                                                        <div className="bought-item-remove-btn">
+                                                            <span>Remove item</span>
                                                         </div>
                                                     </div>
-                                                    <div className="bought-item-remove-btn">
-                                                        <span>Remove item</span>
-                                                    </div>
                                                 </div>
+                                                <h5>$40.00</h5>
                                             </div>
-                                            <div className="bought-item-price">
-                                                <h4>$40.00</h4>
-                                            </div>
-                                        </div>
-                                        <div className="bought-item">
-                                            <div className="bought-item-img">
-                                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
-                                            </div>
-                                            <div className="bought-item-info">
-                                                <div className="bought-item-name">
-                                                    <h6>Cheese cream</h6>
-                                                </div>
-                                                <div className="bought-item-price">
-                                                    <h5>$40.00</h5>
-                                                </div>
-                                                <div className="bought-item-des">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
-                                                </div>
-                                                <div className="bought-flex">
-                                                    <div className="bought-item-plus-minus">
-                                                        <div className="btn-minus">
-                                                            <button>-</button>
-                                                        </div>
-                                                        <div className="total-sum">
-                                                            <input type="number" />
-                                                        </div>
-                                                        <div className="btn-plus">
-                                                            <button>+</button>
-                                                        </div>
-                                                    </div>
-                                                    <div className="bought-item-remove-btn">
-                                                        <span>Remove item</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="bought-item-price">
-                                                <h4>$40.00</h4>
-                                            </div>
-                                        </div>
-                                        <div className="bought-item">
-                                            <div className="bought-item-img">
-                                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-19.jpg" alt="" />
-                                            </div>
-                                            <div className="bought-item-info">
-                                                <div className="bought-item-name">
-                                                    <h6>Cheese cream</h6>
-                                                </div>
-                                                <div className="bought-item-price">
-                                                    <h5>$40.00</h5>
-                                                </div>
-                                                <div className="bought-item-des">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
-                                                </div>
-                                                <div className="bought-flex">
-                                                    <div className="bought-item-plus-minus">
-                                                        <div className="btn-minus">
-                                                            <button>-</button>
-                                                        </div>
-                                                        <div className="total-sum">
-                                                            <input type="number" />
-                                                        </div>
-                                                        <div className="btn-plus">
-                                                            <button>+</button>
-                                                        </div>
-                                                    </div>
-                                                    <div className="bought-item-remove-btn">
-                                                        <span>Remove item</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="bought-item-price">
-                                                <h4>$40.00</h4>
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                     <div className="sidebar-bottom">
                                         <div className="sidebar-bottom-top">
@@ -170,7 +125,7 @@ const HeaderMain = () => {
                                         </div>
                                         <div className="sidebar-bottom-btns">
                                             <Link to='/cart'>
-                                                <button className="cart-btn">Veiw my cart</button>
+                                                <button className="cart-btn">View my cart</button>
                                             </Link>
                                             <Link to='/checkout'>
                                                 <button className="checkout">Cart to checkout</button>
@@ -196,12 +151,13 @@ const HeaderMain = () => {
                             <Link to='/doing'>WHAT WE DO</Link>
                             <Link to='/shop'>SHOP</Link>
                             <Link to='/contact'>CONTACT US</Link>
+                            <Link to='/cart'>CART</Link>
                         </div>
                     </div>
                 </div>
             </header>
         </>
-    )
+    );
 }
 
-export default HeaderMain
+export default HeaderMain;

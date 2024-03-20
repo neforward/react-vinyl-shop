@@ -6,6 +6,7 @@ import WhatWeDo from './pages/WhatWeDo.jsx'
 import About from './pages/About.jsx'
 import Cart from "./pages/Cart.jsx"
 import Checkout from "./pages/Checkout.jsx"
+import Product from "./pages/Product.jsx"
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </>
   )
