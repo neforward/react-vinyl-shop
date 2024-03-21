@@ -34,6 +34,20 @@ const Cart = () => {
             <div className="cart-main">
                 <div className="main-container">
                     <div className="cart-items">
+                        <div className="cart-names">
+                            <div className="cart-name-product">
+                                <h2>Product</h2>
+                            </div>
+                            <div className="cart-name-price">
+                                <h2>Price</h2>
+                            </div>
+                            <div className="cart-name-quantity">
+                                <h2>Quantity</h2>
+                            </div>
+                            <div className="cart-name-subtotal">
+                                <h2>Subtotal</h2>
+                            </div>
+                        </div>
                         {quantities.map((quantity, index) => (
                             <div className="cart-item" key={index}>
                                 <div className="first-cart-flex">

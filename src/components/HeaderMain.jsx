@@ -28,6 +28,18 @@ const HeaderMain = () => {
             setCartItems(updatedCartItems);
         }
     };
+    const removeItem = (index) => {
+        const updatedCartItems = [...cartItems];
+        updatedCartItems.splice(index, 1);
+        setCartItems(updatedCartItems);
+    };
+    const calculateSubtotal = () => {
+        let subtotal = 0;
+        cartItems.forEach((item) => {
+            subtotal += item.quantity * 40;
+        });
+        return subtotal.toFixed(2);
+    };
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -106,7 +118,7 @@ const HeaderMain = () => {
                                                                 <button onClick={() => incrementItemCount(index)}>+</button>
                                                             </div>
                                                         </div>
-                                                        <div className="bought-item-remove-btn">
+                                                        <div className="bought-item-remove-btn" onClick={() => removeItem(index)}>
                                                             <span>Remove item</span>
                                                         </div>
                                                     </div>
@@ -118,7 +130,7 @@ const HeaderMain = () => {
                                     <div className="sidebar-bottom">
                                         <div className="sidebar-bottom-top">
                                             <h3>Subtotal</h3>
-                                            <h2>$40.00</h2>
+                                            <h2>${calculateSubtotal()}</h2>
                                         </div>
                                         <div className="sidebar-bottom-des">
                                             <p>Shipping, taxes, and discounts calculated at checkout.</p>
