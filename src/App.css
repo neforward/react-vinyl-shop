@@ -294,7 +294,7 @@ body {
   margin: 0;
   padding-bottom: 30px;
 }
-.slide-btn {
+.slide-flex-two .slide-btn {
   padding-left: 40px;
 }
 .slide-btn button {
@@ -2635,7 +2635,7 @@ div.active {
 }
 @media screen and (max-width: 1500px) {
   .slide-img {
-    max-width: 750px;
+    max-width: 700px;
     height: 100vh;
   }
   .slide-img-two {
@@ -2646,15 +2646,15 @@ div.active {
     height: 100vh;
   }
   .slide-img-third {
-    max-width: 750px;
+    max-width: 700px;
     height: 100vh;
   }
   .slide-img-three {
-    max-width: 750px;
+    max-width: 700px;
     height: 100vh;
   }
   .slide-img-honey {
-    max-width: 750px;
+    max-width: 700px;
     height: 100vh;
   }
 }
