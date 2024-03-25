@@ -12,9 +12,11 @@ const Header = () => {
             <header className='header'>
                 <div className="container">
                     <div className="header-content">
-                        <div className="header-logo">
-                            <img src="https://beymaral-honey.com/wp-content/uploads/2024/02/transparent-logo.png" alt="" />
-                        </div>
+                        <Link to='/'>
+                            <div className="header-logo">
+                                <img src="https://patrickgeorge.com/wp-content/uploads/2023/01/Vinyl_05-1.webp" alt="" />
+                            </div>
+                        </Link>
                         <div className={`menu-btn ${isActive ? 'active' : ''}`} onClick={toggleMenu}>
                             <span className="bar"></span>
                             <span className="bar"></span>

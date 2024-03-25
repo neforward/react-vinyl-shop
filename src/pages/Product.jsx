@@ -168,7 +168,7 @@ const Product = () => {
               </div>
               <div className="product-related">
                 <div className="product-related-title">
-                  <h2>Related products</h2>
+                  <h2>Related Vinyls</h2>
                 </div>
                 <div className="product-items">
                   <div className="product-item">

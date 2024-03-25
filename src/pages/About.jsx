@@ -13,80 +13,58 @@ const About = () => {
                         <div className="left-side">
                             <div className="about-text">
                                 <h5>ABOUT US</h5>
-                                <h2>BEYMARAL HONEY</h2>
+                                <h2>Vinyl Head</h2>
                             </div>
                             <div className="about-des-one">
-                                <span>Beymaral</span>
-                                <p>Lupin or Onobrychis vicifolia is a perennial
-                                    herbaceous plant. Widely found in mountain pastures
-                                    in Kyrgyzstan, it blooms from May to August. Its
-                                    countless flowers, gathered in long panicle-shaped
-                                    inflorescences of a very intense pink color,
-                                    attract bees in a kind of dance of abundance,
-                                    from which they obtain the healing White Lupin Honey,
-                                    belonging to the family of rare and precious honeys.</p>
+                                <span>Vinyl Records</span>
+                                <p>"Welcome to Vinyl Haven, the quintessential vinyl store nestled in the heart of Brooklyn, New York. As you step through the inviting doorway, you're immediately enveloped in the rich, nostalgic ambiance that only a vinyl record store can offer.</p>
                             </div>
                             <div className="about-des-two">
-                                <p><span>Beymaral Honey</span> has a
-                                    characteristic and unmistakable taste and aroma.
-                                    The main note is a pleasant floral scent, especially
-                                    of roses. Therefore, lupin honey has a taste characterized
-                                    by a soft balance between sweetness and acidity, with a slightly
-                                    herbaceous aftertaste that distinguishes it from its “siblings.”</p>
+                                <p><span>Vinyl Head</span> has a
+                                The walls are adorned with vibrant album covers, creating a kaleidoscope of musical history spanning decades and genres. From classic rock icons to underground indie gems, Vinyl Haven boasts an extensive collection curated to satisfy every musical palate.</p>
                             </div>
                             <p>It pairs perfectly with most fruits, fresh cheeses, white meat dishes, and fish.</p>
 
                             <span>THE BEES</span>
                             <div className="about-des-three">
-                                <p><span>Beymaral Honey</span> stands out not only for the exceptional quality of its lupin honey, but also for its ethical and sustainable approach to beekeeping. The company adopts a responsible practice that respects the natural cycle of bees, avoiding the overexploitation of these precious insects.</p>
+                                <p><span>Vinyl Head</span> Amidst the rows of meticulously organized vinyl records, you'll find vintage turntables and audio equipment, inviting enthusiasts to immerse themselves fully in the analog experience. Knowledgeable staff members are always on hand, ready to offer recommendations or engage in spirited discussions about favorite albums and artists.</p>
                             </div>
                             <div className="about-des-four">
-                                <p>In conclusion, <span>Beymaral Honey</span> not only offers a high-quality product but does so in a way that respects and supports the environment and the living beings contributing to its production. This represents an excellent example of how business practices can be aligned with environmental and ethical responsibility, creating a positive impact for both consumers and the planet.</p>
-                            </div>
-                            <div className="about-des-five">
-                                <span>COMPOSITION</span>
-                                <p>– A large amount of ascorbic acid (vitamin C)</p>
-                                <p>– Calcium pantothenate, trace elements and minerals (vitamin B5)</p>
-                                <p>– Sucrose, which promotes the absorption of heavy metals in the human body</p>
-                                <p>– It has a caloric value of 315 Kcal. per 100 g of nectar.</p>
+                                <p>In conclusion, <span>Vinyl Head</span> isn't just a record store; it's a sanctuary for music aficionados, a haven where the past meets the present in a symphony of sound. With its vast selection, vibrant atmosphere, and commitment to community, Vinyl Haven stands as a testament to the enduring allure of vinyl culture in the digital age. So whether you're seeking sonic nostalgia or embarking on a musical odyssey, step into Vinyl Haven and let the groove guide you on a journey you won't soon forget.</p>
                             </div>
                         </div>
                         <div className="right-side">
                             <div className="one">
                                 <div className="logo-box">
-                                    <TiHome size={50} />
-                                    <img src="" alt="" />
-                                    <h2>Beymaral Honey</h2>
-                                    <p>We offers high-quality, ethically produced honey that respects the environment and supports bee well-being.</p>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/PgLang.png" alt="" />
+                                    <h2>pgLang</h2>
+                                    <p>Our valued partners in creating immersive experiences and thrilling adventures for all ages.</p>
                                 </div>
                                 <div className="logo-box">
-                                    <TiHome size={50} />
-                                    <img src="" alt="" />
-                                    <h2>Quality Products</h2>
-                                    <p>We provide top-quality products while respecting and supporting the environment and its contributing living beings.</p>
+                                    <img src="https://www.theaudiodb.com/images/media/label/logo/rpvyrt1588510717.png" alt="" />
+                                    <h2>Dreamville</h2>
+                                    <p>Our esteemed partners, fostering creativity and innovation in music, art, and culture alongside us.</p>
                                 </div>
                             </div>
                             <div className="two">
                                 <div className="logo-box">
-                                    <TiHome size={50} />
-                                    <img src="" alt="" />
-                                    <h2>Flavorful Symphony</h2>
-                                    <p>Beymaral Honey presents a delightful combination of exquisite flavor and captivating fragrance, harmonizing to create a truly memorable experience.</p>
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/G.O.O.D._Music_logo.png" alt="" />
+                                    <h2>GOOD Music</h2>
+                                    <p>Our esteemed collaborators in crafting soulful and innovative sounds that resonate with audiences worldwide.</p>
                                 </div>
                                 <div className="logo-box">
-                                    <TiHome size={50} />
-                                    <img src="" alt="" />
-                                    <h2>Finest Nectar</h2>
-                                    <p>Our bees are expertly tended to, ensuring they gather the finest nectar from the vibrant pink lupin flowers.</p>
+                                    <img src="https://seeklogo.com/images/C/cactus-jack-logo-B9A772D2E0-seeklogo.com.png" alt="" />
+                                    <h2>Cactus Jack</h2>
+                                    <p>Our Partners: A dynamic team of outdoor enthusiasts specializing in adventurous expeditions and wilderness experiences."</p>
                                 </div>
                             </div>
                             <div className="right-des">
-                                <h2>Beneficial Properties of Beymaral Honey</h2>
-                                <p>The beneficial properties of lupin honey are attributed to the presence of phytoncides. Almost a century ago, a group of scientists discovered that biologically active volatile substances can destroy the development and growth of bacteria and pathogens that cause inflammation.</p>
-                                <span>– Stabilizes metabolism</span>
-                                <span>– Strengthens the immune system</span>
-                                <span>– Has anti-inflammatory properties</span>
-                                <span>– Stabilizes cholesterol and glucose levels, fights bad cholesterol</span>
+                                <h2>Beneficial Properties of Vinyl Head</h2>
+                                <p>Our products are designed with precision and care, utilizing advanced manufacturing techniques and premium materials to ensure durability, comfort, and style. From classic designs to cutting-edge trends, Vinyl Head offers a diverse range of headgear options to suit every taste and occasion.</p>
+                                <span>– Durability</span>
+                                <span>– Water Resistance</span>
+                                <span>– Easy Maintenance</span>
+                                <span>– Versatility</span>
                             </div>
                         </div>
                     </div>

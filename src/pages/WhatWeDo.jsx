@@ -9,63 +9,33 @@ const WhatWeDo = () => {
                 <div className="main-container">
                     <div className="doing-flex">
                         <div className="left-des">
-                            <h4>WHITE HONEY</h4>
+                            <h4>Vinyl Records</h4>
                             <div className="doing-des">
-                                <b>BEYMARAL HONEY</b>
+                                <b>Vinyl Vinyl</b>
                                 <p>
-                                    Lupin, or Onobrychis vicifolia, is a perennial herbaceous plant
-                                    found widely in mountain pastures in Kyrgyzstan. It blooms from
-                                    May to August, with its countless flowers gathered in long panicle-shaped
-                                    inflorescences of intense pink color, attracting bees in a dance of abundance.
-                                    From these flowers, they obtain healing White Lupin Honey, belonging to the family
-                                    of rare and precious honeys.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur eligendi aspernatur perferendis fugit officia asperiores sequi iusto, necessitatibus id, soluta a minima ipsa numquam voluptatum. Quaerat doloremque consequatur sint neque?
                                 </p>
                             </div>
                             <div className="doing-des">
-                                <b>What is lupin honey?</b>
+                                <b>What is Vinyl Vinyl?</b>
                                 <p>
-                                    Beymaral Honey has a characteristic and unmistakable
-                                    taste and aroma, with a pleasant floral scent,
-                                    especially of roses. Lupin honey offers a taste
-                                    characterized by a soft balance between sweetness and
-                                    acidity, with a slightly herbaceous aftertaste that sets
-                                    it apart. It pairs perfectly with most fruits, fresh cheeses,
-                                    white meat dishes, and fish.
+                                Vinyl Head isn't just a store; it's an immersive sensory journey that captivates all who enter. Stepping into Vinyl Head is like stepping into a fragrant garden, as its distinctive aroma fills the air with the delicate scent of fresh roses. This unique ambiance sets the stage for an experience that goes beyond the ordinary.
                                 </p>
                             </div>
                             <p>
-                                After harvest, the honey’s color initially
-                                varies from light golden to a more intense
-                                and dark hue. Within 3-4 weeks, the nectar
-                                crystallizes rapidly, acquiring a finely granulated
-                                and velvety consistency with white shades.
+                                After the vinyl is sourced, it undergoes a captivating transformation within the confines of the store. Initially presenting a spectrum from subtle hues to deeper tones, each record holds a promise of auditory delight. Over the course of 3-4 weeks, a remarkable metamorphosis occurs as the vinyl adopts a new texture. Rapidly, it crystallizes, acquiring a finely granulated surface with a velvety consistency, adorned with delicate white streaks. This evolution enhances the allure of the vinyl, offering not just a medium for sound but also a visual spectacle. Each record becomes a testament to time and artistry, inviting exploration and promising an immersive sensory experience to those who dare to indulge.
                             </p>
                             <div className="doing-des">
-                                <b>THE BEES</b>
                                 <p>
-                                    Beymaral Honey stands out not only for the
-                                    exceptional quality of its lupin honey but
-                                    also for its ethical and sustainable approach
-                                    to beekeeping. The company adopts a responsible
-                                    practice that respects the natural cycle of bees,
-                                    avoiding overexploitation. Our philosophy is based
-                                    on fair and sustainable harvesting, ensuring the bees
-                                    have enough honey to sustain themselves while supporting
-                                    ecosystem balance and bee colony health.
+                                    "Vinyl Head" is a specialty store dedicated to vinyl records, catering to music enthusiasts and collectors alike. Situated in a vibrant urban setting, Vinyl Head offers a haven for audiophiles seeking the nostalgic charm and authentic sound of vinyl records.
+
+                                    Upon entering Vinyl Head, customers are greeted by rows of meticulously curated vinyl records spanning various genres, from classic rock and jazz to electronic and indie. The store prides itself on its diverse selection, featuring both popular mainstream releases and rare, hard-to-find gems.
                                 </p>
                                 <p>
-                                    This ethical approach promotes environmental sustainability
-                                    and ensures high-quality honey. Respect for the bees’
-                                    well-being directly reflects in the honey’s quality, as
-                                    healthy bees produce purer and more aromatic honey.
+                                    In addition to vinyl records, Vinyl Head also stocks a range of accessories and equipment for vinyl enthusiasts, including turntables, cartridges, and cleaning kits. Whether customers are seasoned collectors or new to the world of vinyl, the store provides a welcoming environment for exploring and discovering music in its purest form.
                                 </p>
                                 <p>
-                                    In conclusion, Beymaral Honey offers a high-quality
-                                    product while respecting and supporting the environment
-                                    and the living beings contributing to its production.
-                                    This exemplifies how business practices can align with
-                                    environmental and ethical responsibility, creating a positive
-                                    impact.
+                                    Overall, Vinyl Head offers a unique and immersive shopping experience for anyone with a love for music and a appreciation for the timeless appeal of vinyl records.
                                 </p>
                             </div>
                         </div>

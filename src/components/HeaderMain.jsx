@@ -64,7 +64,7 @@ const HeaderMain = () => {
                     <div className="main-header-content">
                         <nav className="main-header-nav">
                             <Link to='/'>
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2024/02/transparent-logo.png" alt="" />
+                                <img src="https://patrickgeorge.com/wp-content/uploads/2023/01/Vinyl_05-1.webp" alt="" />
                             </Link>
                             <Link to='/'>
                                 <span>HOME</span>
