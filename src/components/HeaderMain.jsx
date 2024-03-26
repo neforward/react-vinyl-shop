@@ -67,65 +67,74 @@ const HeaderMain = () => {
                             <RiShoppingCartLine onClick={toggleSidebar} size={30} />
                             <div className={sidebarActive ? 'sidebar active' : 'sidebar'} id="sidebar">
                                 <div className="sidebar-container">
-                                    <div className="sidebar-top">
-                                        {/* <h2>YOUR CART ({cartItems.length} ITEM{cartItems.length !== 1 ? 'S' : ''})</h2> */}
-                                        <IoMdClose size={30} onClick={toggleSidebar} />
-                                    </div>
-                                    <div className="bought-items">
-                                        {cartItems.map((item, index) => (
-                                            <div className="bought-item" key={index}>
-                                                <div className="bought-item-img">
-                                                    <img src={item.imgUrl} alt={item.title} />
-                                                </div>
-                                                <div className="bought-item-info">
-                                                    <div className="bought-item-name">
-                                                        <h6>{item.title}</h6>
-                                                    </div>
-                                                    <div className="bought-item-price">
+                                    {cartItems.length === 0 ? (
+                                        <div className="side-bar-empty">
+                                            <h2>cart is empty</h2>
+                                            <p>add at least one vinyl please</p>
+                                            <div className="empty-btn">
+                                                <button onClick={toggleSidebar}>Get Back</button>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <div className="sidebar-top">
+                                                <h2>YOUR CART ({cartItems.length} ITEM{cartItems.length !== 1 ? 'S' : ''})</h2>
+                                                <IoMdClose size={30} onClick={toggleSidebar} /></div><div className="bought-items">
+                                                {cartItems.map((item, index) => (
+                                                    <div className="bought-item" key={index}>
+                                                        <div className="bought-item-img">
+                                                            <img src={item.imgUrl} alt={item.title} />
+                                                        </div>
+                                                        <div className="bought-item-info">
+                                                            <div className="bought-item-name">
+                                                                <h6>{item.title}</h6>
+                                                            </div>
+                                                            <div className="bought-item-price">
+                                                                <h5>{item.price}</h5>
+                                                            </div>
+                                                            <div className="bought-item-des">
+                                                                <p>{item.des}</p>
+                                                            </div>
+                                                            <div className="bought-flex">
+                                                                <div className="bought-item-plus-minus">
+                                                                    <div className="btn-minus">
+                                                                        <button>-</button>
+                                                                    </div>
+                                                                    <div className="total-sum">
+                                                                        <input type="number" value={item.quantity} />
+                                                                    </div>
+                                                                    <div className="btn-plus">
+                                                                        <button>+</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="bought-item-remove-btn" onClick={() => handleRemoveItem(item)}>
+                                                                    <span>Remove item</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <h5>{item.price}</h5>
                                                     </div>
-                                                    <div className="bought-item-des">
-                                                        <p>{item.des}</p>
-                                                    </div>
-                                                    <div className="bought-flex">
-                                                        <div className="bought-item-plus-minus">
-                                                            <div className="btn-minus">
-                                                                <button>-</button>
-                                                            </div>
-                                                            <div className="total-sum">
-                                                                <input type="number" />
-                                                            </div>
-                                                            <div className="btn-plus">
-                                                                <button >+</button>
-                                                            </div>
-                                                        </div>
-                                                        <div className="bought-item-remove-btn" onClick={() => handleRemoveItem(item)} >
-                                                            <span>Remove item</span>
-                                                        </div>
-                                                    </div>
+                                                ))}
+                                            </div><div className="sidebar-bottom">
+                                                <div className="sidebar-bottom-top">
+                                                    <h3>Subtotal</h3>
+                                                    <h2>${totalSum.toFixed(2)}</h2>
                                                 </div>
-                                                <h5>$40.00</h5>
+                                                <div className="sidebar-bottom-des">
+                                                    <p>Shipping, taxes, and discounts calculated at checkout.</p>
+                                                </div>
+                                                <div className="sidebar-bottom-btns">
+                                                    <Link to='/cart'>
+                                                        <button className="cart-btn">View my cart</button>
+                                                    </Link>
+                                                    <Link to='/checkout'>
+                                                        <button className="checkout">Cart to checkout</button>
+                                                    </Link>
+                                                </div>
                                             </div>
-                                        ))}
-                                    </div>
-                                    <div className="sidebar-bottom">
-                                        <div className="sidebar-bottom-top">
-                                            <h3>Subtotal</h3>
-                                            <h2>${totalSum.toFixed(2)}</h2>
-                                        </div>
-                                        <div className="sidebar-bottom-des">
-                                            <p>Shipping, taxes, and discounts calculated at checkout.</p>
-                                        </div>
-                                        <div className="sidebar-bottom-btns">
-                                            <Link to='/cart'>
-                                                <button className="cart-btn">View my cart</button>
-                                            </Link>
-                                            <Link to='/checkout'>
-                                                <button className="checkout">Cart to checkout</button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </>
+                                    )}</div>
+
                             </div>
                         </div>
                         <div className="responsive-logo">

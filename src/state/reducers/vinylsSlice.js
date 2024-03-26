@@ -545,7 +545,7 @@ export const vinylsSlice = createSlice({
                 price: '$89.99',
                 id: 59,
                 des: `Demon Days is the second studio album by the British virtual band Gorillaz. It was released on 11 May 2005 in Japan and 23 May 2005 in the United Kingdom by Parlophone and in the United States by Virgin Records. Produced by Gorillaz, Danger Mouse, Jason Cox, and James Dring, it features De La Soul, Neneh Cherry, Martina Topley-Bird, Roots Manuva, MF Doom, Ike Turner, Bootie Brown of the Pharcyde, Shaun Ryder and Dennis Hopper. As with the band's eponymous 2001 debut, Demon Days and its performances were accompanied by various multimedia, including interactive features on the Gorillaz website, animated music videos and animatics. The visuals were designed by the Gorillaz co-creator Jamie Hewlett, under his design company Zombie Flesh Eaters.`
-            }, 
+            },
             {
                 genre: 'Alternative',
                 artist: 'Gorillaz',
@@ -556,28 +556,132 @@ export const vinylsSlice = createSlice({
                 des: `Gorillaz is the debut studio album by English virtual band Gorillaz, released on 26 March 2001 in the United Kingdom by Parlophone and in the United States by Virgin Records. The album reached number three in the UK and number fourteen in the US, and the top ten in several other countries. Gorillaz has sold over seven million copies worldwide. The album's success earned the group an entry in the Guinness Book of World Records as the "Most Successful Virtual Band", and spawned the singles "Clint Eastwood", "19-2000", "Rock the House", and "Tomorrow Comes Today".`
             },
             {
-                artist: '',
-                imgUrl: '',
-                title: '',
-                price: '$'
+                genre: 'Hip-Hop/Rap',
+                artist: 'Metro Boomin',
+                imgUrl: 'https://shop.republicrecords.com/cdn/shop/products/Metro-vinyl-mockcopy.png?v=1695678561',
+                title: 'Heroes & Villains',
+                price: '$47.99',
+                id: 61,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             },
             {
-                imgUrl: '',
-                title: '',
-                price: '$'
+                genre: 'Hip-Hop/Rap',
+                artist: 'Metro Boomin',
+                imgUrl: 'https://recordstore.co.uk/cdn/shop/files/spider1.png?v=1695119128',
+                imgUrlTwo: 'https://www.bravado.de/assets/asset_300x300/Metro-Boomin-METRO-BOOMIN-PRESENTS-SPIDER-MAN-ACROSS-THE-SPIDER-VERSE-SOUNDTRACK-Vinyl-505049-403717.png',
+                title: 'SPIDER-MAN: ACROSS THE SPIDER-VERSE',
+                price: '$30.99',
+                id: 62,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             },
             {
-                imgUrl: '',
-                title: '',
-                price: '$'
+                genre: 'Hip-Hop/Rap',
+                artist: 'Mac Miller',
+                imgUrl: 'https://shop.macmillerswebsite.com/cdn/shop/files/MMI-swimmingpools-LP.png?v=1700603898',
+                title: 'Swimming',
+                price: '$34.99',
+                id: 63,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Kendrick Lamar',
+                imgUrl: 'https://store.polydor.co.uk/cdn/shop/products/SharedImage-137229.png?v=1693848218&width=3000',
+                title: 'Mr. Morale & the Big Steppers',
+                price: '$55.60',
+                id: 64,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Gunna',
+                imgUrl: 'https://thesoundofvinyl.com/cdn/shop/products/SharedImage-146116.png?v=1686632594',
+                title: 'DS4EVER',
+                price: '$23.99',
+                id: 65, 
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Future',
+                imgUrl: 'https://futureofficial.shop/cdn/shop/products/INEVERLIKEDYOULIMITEDEDITIONVINYL-BUTTERCREAM_530x@2x.png?v=1675460280',
+                title: 'I NEVER LIKED YOU',
+                price: '$55.99',
+                id: 66, 
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Future',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/future_1024x1024.png?v=1625466052',
+                title: 'High Off',
+                price: '$34.99',
+                id: 67, 
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Young Thug',
+                imgUrl: 'https://www.youngstonerlifeshop.com/on/demandware.static/-/Sites-warner-master/default/dwea931c96/YOUNG%20THUG/PUNK-YT-MOCKUP-00-front-Smoke-Green.png',
+                title: 'Punk',
+                price: '$99.99',
+                id: 68, des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Young Thug',
+                imgUrl: 'https://groundzero.fr/wp-content/uploads/2023/02/YT.jpg.png',
+                title: 'jeffery',
+                price: '$99.99',
+                id: 69,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            }
+            ,
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Destroy Lonely',
+                imgUrl: 'https://shopuk.destroylonely.net/cdn/shop/products/large-DESTROY_20LONELY_20packshot_20black_20copy.png?v=1700585043&width=1280',
+                title: 'If Looks Could Kill',
+                price: '$45.99',
+                id: 70,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Yeat',
+                imgUrl: 'https://interscope.com/cdn/shop/files/Yeat-AfterLyfeVinyl2LP.png?v=1707419305',
+                title: 'AftërLyfe',
+                price: '$34.99',
+                id: 71,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'MF DOOM',
+                imgUrl: 'https://cdn.shopify.com/s/files/1/0043/7105/4710/files/madvillany-hhv-final-01_400x.png',
+                title: 'Madvillainy',
+                price: '$67.99',
+                id: 72,
+                des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Baby Keem',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/194399969915_1024x1024.png?v=1668647721',
+                title: 'The Melodic Blue',
+                price: '$44.99',
+                id: 73,
+                des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             }
         ],
+
     },
     reducers: {
         setVinyls: (state, action) => {
             state.vinyls = action.payload;
         },
     },
+
 });
 
 export const { setVinyls } = vinylsSlice.actions;

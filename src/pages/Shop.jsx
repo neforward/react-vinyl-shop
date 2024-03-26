@@ -10,8 +10,10 @@ const Shop = () => {
     const vinyls = useSelector(state => state.vinyls.vinyls);
 
     const handleAddToCart = (vinyl) => {
-        dispatch(addToCart(vinyl));
+        const newItem = { ...vinyl, quantity: 1 };
+        dispatch(addToCart(newItem));
     };
+    
     return (
         <>
             <HeaderMain />
