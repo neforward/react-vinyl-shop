@@ -40,7 +40,7 @@ const Home = () => {
                                     </div>
                                 </Link>
                                 <div className="jars">
-                                    <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/h9-img-10.jpg" alt="" />
+                                    <img src="https://png.pngtree.com/png-vector/20231220/ourmid/pngtree-stack-of-vinyl-records-on-white-background-vintage-png-image_11211814.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ const Home = () => {
                                 </Link>
                             </div>
                             <div className="honey-img">
-                                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/h9-img-11.jpg" alt="" />
+                                <img src="https://webuyvinylrecords.co.uk/wp-content/uploads/2022/01/record-trs.png" alt="" />
                             </div>
                         </div>
                         <div className="slide-img-three"></div>
