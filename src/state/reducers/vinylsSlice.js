@@ -598,7 +598,7 @@ export const vinylsSlice = createSlice({
                 imgUrl: 'https://thesoundofvinyl.com/cdn/shop/products/SharedImage-146116.png?v=1686632594',
                 title: 'DS4EVER',
                 price: '$23.99',
-                id: 66, 
+                id: 66,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             },
             {
@@ -607,7 +607,7 @@ export const vinylsSlice = createSlice({
                 imgUrl: 'https://futureofficial.shop/cdn/shop/products/INEVERLIKEDYOULIMITEDEDITIONVINYL-BUTTERCREAM_530x@2x.png?v=1675460280',
                 title: 'I NEVER LIKED YOU',
                 price: '$55.99',
-                id: 67, 
+                id: 67,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             },
             {
@@ -616,7 +616,7 @@ export const vinylsSlice = createSlice({
                 imgUrl: 'https://sound-merch.com.au/cdn/shop/products/future_1024x1024.png?v=1625466052',
                 title: 'High Off',
                 price: '$34.99',
-                id: 68, 
+                id: 68,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             },
             {
@@ -674,14 +674,12 @@ export const vinylsSlice = createSlice({
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
             }
         ],
-
     },
     reducers: {
         setVinyls: (state, action) => {
             state.vinyls = action.payload;
         },
     },
-
 });
 
 export const { setVinyls } = vinylsSlice.actions;
