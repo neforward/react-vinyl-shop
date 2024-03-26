@@ -1169,12 +1169,12 @@ body {
   display: none;
 }
 
-.main-header-cart img.cart {
+.main-header-cart svg {
   cursor: pointer;
   opacity: 0.5;
   transition: 0.3s;
 }
-.main-header-cart img.cart:hover {
+.main-header-cart svg:hover {
   opacity: 1;
 }
 .sidebar {
@@ -1189,7 +1189,6 @@ body {
 
   z-index: 99;
 }
-
 .sidebar.active {
   right: 0;
   overflow-y: auto;
@@ -1650,6 +1649,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   margin: 0;
 }
+
 .cart-main-btns button:hover {
   background-position: 99% 50%;
 }

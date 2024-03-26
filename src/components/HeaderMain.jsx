@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-
+import { RiShoppingCartLine } from "react-icons/ri";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../state/actions/cartAction";
 const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
+    const [totalSum, setTotalSum] = useState(0);
+    const dispatch = useDispatch();
 
     const toggleMenu = () => {
         setIsActive(!isActive);
@@ -22,13 +26,17 @@ const HeaderMain = () => {
                 toggleSidebar();
             }
         };
-
         document.addEventListener('click', handleClickOutside);
 
         return () => {
             document.removeEventListener('click', handleClickOutside);
         };
     }, [sidebarActive]);
+
+    const cartItems = useSelector(state => state.cart.cartItems);
+    const handleRemoveItem = (item) => {
+        dispatch(removeFromCart(item));
+    };
 
     return (
         <>
@@ -56,7 +64,7 @@ const HeaderMain = () => {
                             </Link>
                         </nav>
                         <div className="main-header-cart">
-                            <img className="cart" onClick={toggleSidebar} src="./cart.svg" alt="../../public/cart.svg" />
+                            <RiShoppingCartLine onClick={toggleSidebar} size={30} />
                             <div className={sidebarActive ? 'sidebar active' : 'sidebar'} id="sidebar">
                                 <div className="sidebar-container">
                                     <div className="sidebar-top">
@@ -64,45 +72,46 @@ const HeaderMain = () => {
                                         <IoMdClose size={30} onClick={toggleSidebar} />
                                     </div>
                                     <div className="bought-items">
-
-                                        <div className="bought-item">
-                                            <div className="bought-item-img">
-                                                <img src="" alt="" />
-                                            </div>
-                                            <div className="bought-item-info">
-                                                <div className="bought-item-name">
-                                                    <h6>Cheese cream</h6>
+                                        {cartItems.map((item, index) => (
+                                            <div className="bought-item" key={index}>
+                                                <div className="bought-item-img">
+                                                    <img src={item.imgUrl} alt={item.title} />
                                                 </div>
-                                                <div className="bought-item-price">
-                                                    <h5>$40.00</h5>
-                                                </div>
-                                                <div className="bought-item-des">
-                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
-                                                </div>
-                                                <div className="bought-flex">
-                                                    <div className="bought-item-plus-minus">
-                                                        <div className="btn-minus">
-                                                            <button>-</button>
+                                                <div className="bought-item-info">
+                                                    <div className="bought-item-name">
+                                                        <h6>{item.title}</h6>
+                                                    </div>
+                                                    <div className="bought-item-price">
+                                                        <h5>{item.price}</h5>
+                                                    </div>
+                                                    <div className="bought-item-des">
+                                                        <p>{item.des}</p>
+                                                    </div>
+                                                    <div className="bought-flex">
+                                                        <div className="bought-item-plus-minus">
+                                                            <div className="btn-minus">
+                                                                <button>-</button>
+                                                            </div>
+                                                            <div className="total-sum">
+                                                                <input type="number" />
+                                                            </div>
+                                                            <div className="btn-plus">
+                                                                <button >+</button>
+                                                            </div>
                                                         </div>
-                                                        <div className="total-sum">
-                                                            <input type="number" />
-                                                        </div>
-                                                        <div className="btn-plus">
-                                                            <button >+</button>
+                                                        <div className="bought-item-remove-btn" onClick={() => handleRemoveItem(item)} >
+                                                            <span>Remove item</span>
                                                         </div>
                                                     </div>
-                                                    <div className="bought-item-remove-btn" >
-                                                        <span>Remove item</span>
-                                                    </div>
                                                 </div>
+                                                <h5>$40.00</h5>
                                             </div>
-                                            <h5>$40.00</h5>
-                                        </div>
+                                        ))}
                                     </div>
                                     <div className="sidebar-bottom">
                                         <div className="sidebar-bottom-top">
                                             <h3>Subtotal</h3>
-                                            <h2>${ }</h2>
+                                            <h2>${totalSum.toFixed(2)}</h2>
                                         </div>
                                         <div className="sidebar-bottom-des">
                                             <p>Shipping, taxes, and discounts calculated at checkout.</p>

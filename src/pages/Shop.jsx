@@ -3,12 +3,15 @@ import { Link } from "react-router-dom"
 import Footer from "../components/Footer"
 import HeaderMain from "../components/HeaderMain"
 import ArrowTop from '../components/ArrowTop'
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../state/actions/cartAction'
 const Shop = () => {
+    const dispatch = useDispatch();
     const vinyls = useSelector(state => state.vinyls.vinyls);
 
-
+    const handleAddToCart = (vinyl) => {
+        dispatch(addToCart(vinyl));
+    };
     return (
         <>
             <HeaderMain />
@@ -30,7 +33,7 @@ const Shop = () => {
                                     <Link to={`/product/${product.id}`}>
                                         <img src={product.imgUrl} alt={product.title} />
                                     </Link>
-                                    <button className="btn">Add to cart</button>
+                                    <button className="btn" onClick={() => handleAddToCart(product)}>Add to cart</button>
                                 </div>
                                 <div className="shop-item-text">
                                     <h2>{product.title}</h2>

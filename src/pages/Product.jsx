@@ -2,18 +2,17 @@ import { useState } from 'react';
 import HeaderMain from '../components/HeaderMain'
 import Footer from '../components/Footer'
 import { PiStarDuotone } from "react-icons/pi";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Product = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeContentIndex, setActiveContentIndex] = useState(0);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
   const handleMouseMove = (e) => {
     const element = e.target;
     const rect = element.getBoundingClientRect();
@@ -21,10 +20,12 @@ const Product = () => {
     const y = ((e.clientY - rect.top) / element.offsetHeight) * 100;
     element.style.transformOrigin = `${x}% ${y}%`;
   };
-
   const handleButtonClick = (i) => {
     setActiveContentIndex(i);
   };
+  const { id } = useParams();
+  const products = useSelector((state) => state.vinyls.vinyls);
+  const product = products.find((prod) => prod.id === parseInt(id))
 
   return (
     <>
@@ -43,25 +44,19 @@ const Product = () => {
                     style={{
                       width: '540px',
                       height: '540px',
-                      background: `url("https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg") no-repeat center center`,
+                      background: `url("${product.imgUrl}") no-repeat center center`,
                       backgroundSize: 'cover',
                       transform: isHovered ? 'scale(1.5)' : 'scale(1)',
                     }}>
                   </div>
                 </div>
-                <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
+                <img src={product.imgUrl} alt="" />
               </div>
               <div className="product-text">
                 <div className="first-product-text">
-                  <h2>WHITE CHEESE</h2>
-                  <h6>$65.00</h6>
-                  <p>Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor
-                    invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua.
-                    Justo duo dolor et ea rebum, setet
-                    clita kasd gubergren, amet.</p>
+                  <h2>{product.title}</h2>
+                  <h6>{product.price}</h6>
+                  <p>{product.des}</p>
                 </div>
                 <div className="product-btns">
                   <div className="product-quantity">
@@ -84,8 +79,8 @@ const Product = () => {
                 </div>
                 <div className="product-info">
                   <h3>Info</h3>
-                  <h5>SKU: 001</h5>
-                  <h5>Category: <span>Honey</span></h5>
+                  <h5>Artist: {product.artist}</h5>
+                  <h5>Genre: <span>{product.genre}</span></h5>
                 </div>
                 <div className="product-share">
                   <h3>Share:</h3>
@@ -111,25 +106,17 @@ const Product = () => {
                 <div className="content">
                   <div className={activeContentIndex === 0 ? "content-1 active" : "content-1"}>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua.
-                      Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Enim ad minim
-                      veniam, quis nostrud exercitation sed do eiusmod tempor
-                      incididunt ut labore et dolore magna.
+                      {product.des}
                     </p>
                   </div>
                   <div className={activeContentIndex === 1 ? "content-2 active" : "content-2"}>
                     <div className="flex-row">
-                      <h3>Weight</h3>
-                      <h5>0.5 kg</h5>
+                      <h3>Artist:</h3>
+                      <h5>{product.artist}</h5>
                     </div>
                     <div className="flex-row">
-                      <h3>Dimensions</h3>
-                      <h5>1 × 2 × 3 cm</h5>
+                      <h3>Genre:</h3>
+                      <h5>{product.genre}</h5>
                     </div>
                   </div>
                   <div className={activeContentIndex === 2 ? "content-3 active" : "content-3"}>
@@ -137,7 +124,7 @@ const Product = () => {
                       <h2>REVIEWS</h2>
                       <p>There are no reviews yet.</p>
 
-                      <h2>BE THE FIRST TO REVIEW “WHITE CHEESE”</h2>
+                      <h2>BE THE FIRST TO REVIEW “{product.title}”</h2>
                       <p>Your email address will not be published. Required fields are marked *</p>
                       <h6>Your Rating *</h6>
                       <div className="stars">
