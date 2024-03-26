@@ -19,11 +19,9 @@ const Home = () => {
                                 <h2>Vinyl Head</h2>
                                 <p>Dive into a curated collection sourced from the depths of musical history, each vinyl record a masterpiece crafted by legendary artists and cherished by connoisseurs.</p>
                                 <Link to='/shop'>
-
                                     <div className="slide-btn">
                                         <button>View More</button>
                                     </div>
-
                                 </Link>
                             </div>
                         </div>

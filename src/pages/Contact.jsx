@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import ArrowTop from "../components/ArrowTop"
 const Contact = () => {
     return (
-        <>
+        <> 
             <HeaderMain />
             <div className="contact">
                 <div className="main-container">

@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 
 const Shop = () => {
     const vinyls = useSelector(state => state.vinyls.vinyls);
+
+
     return (
         <>
             <HeaderMain />
