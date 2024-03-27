@@ -1590,6 +1590,9 @@ input::-webkit-inner-spin-button {
     font-size: 12px;
   }
 }
+.gif-about img {
+  max-width: 100%;
+}
 .cart-quantity {
   width: 290px;
 }

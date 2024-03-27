@@ -21,7 +21,7 @@ const About = () => {
                             </div>
                             <div className="about-des-two">
                                 <p><span>Vinyl Head</span> has a
-                                The walls are adorned with vibrant album covers, creating a kaleidoscope of musical history spanning decades and genres. From classic rock icons to underground indie gems, Vinyl Haven boasts an extensive collection curated to satisfy every musical palate.</p>
+                                    The walls are adorned with vibrant album covers, creating a kaleidoscope of musical history spanning decades and genres. From classic rock icons to underground indie gems, Vinyl Haven boasts an extensive collection curated to satisfy every musical palate.</p>
                             </div>
                             <p>It pairs perfectly with most fruits, fresh cheeses, white meat dishes, and fish.</p>
 
@@ -65,6 +65,9 @@ const About = () => {
                                 <span>– Water Resistance</span>
                                 <span>– Easy Maintenance</span>
                                 <span>– Versatility</span>
+                            </div>
+                            <div className="gif-about">
+                                <img src="https://interscope.com/cdn/shop/files/SCOPE-0127-Logo-GIF-for-Email_SMALL_18166f4c-dea6-4595-94f9-1b4353d2f3d8_500x.gif?v=1689893789" alt="" />
                             </div>
                         </div>
                     </div>

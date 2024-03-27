@@ -13,7 +13,7 @@ const Shop = () => {
         const newItem = { ...vinyl, quantity: 1 };
         dispatch(addToCart(newItem));
     };
-    
+
     const handleClick = () => {
         window.scrollTo(0, 0);
     };
@@ -47,7 +47,7 @@ const Shop = () => {
                                 </div>
                                 <div className="shop-item-text">
                                     <h2>{product.title}</h2>
-                                    <h5>{product.price}</h5>
+                                    <h5>${product.price}</h5>
                                 </div>
                             </div>
                         ))}
