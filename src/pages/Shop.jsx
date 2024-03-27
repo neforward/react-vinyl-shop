@@ -5,7 +5,6 @@ import HeaderMain from "../components/HeaderMain"
 import ArrowTop from '../components/ArrowTop'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../state/actions/cartAction'
-import { useEffect } from "react";
 const Shop = () => {
     const dispatch = useDispatch();
     const vinyls = useSelector(state => state.vinyls.vinyls);
@@ -14,6 +13,7 @@ const Shop = () => {
         const newItem = { ...vinyl, quantity: 1 };
         dispatch(addToCart(newItem));
     };
+    
     const handleClick = () => {
         window.scrollTo(0, 0);
     };

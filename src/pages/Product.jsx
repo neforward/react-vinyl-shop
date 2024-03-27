@@ -2,13 +2,14 @@ import { useState } from 'react';
 import HeaderMain from '../components/HeaderMain'
 import Footer from '../components/Footer'
 import { PiStarDuotone } from "react-icons/pi";
-import { Link, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../state/actions/cartAction';
+
 const Product = () => {
   const [isHovered, setIsHovered] = useState(false);
-
   const [activeContentIndex, setActiveContentIndex] = useState(0);
-
+  const dispatch = useDispatch();
   const vinyls = useSelector(state => state.vinyls.vinyls);
 
   const handleMouseEnter = () => {
@@ -44,6 +45,9 @@ const Product = () => {
   };
 
   const relatedVinyls = getRandomVinyls(4, product.id);
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+  };
   return (
     <>
       <HeaderMain />
@@ -92,7 +96,7 @@ const Product = () => {
                       </div>
                     </div>
                   </div>
-                  <button className='addBtn'>Add to cart</button>
+                  <button className="addBtn" onClick={() => handleAddToCart(product)}>Add to cart</button>
                 </div>
                 <div className="product-info">
                   <h3>Info</h3>
