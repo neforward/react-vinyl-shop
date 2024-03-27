@@ -2905,6 +2905,9 @@ div.active {
   }
 }
 @media screen and (max-width: 700px) {
+  .span-container {
+    padding-top: 150px;
+  }
   .jars img {
     max-width: 300px;
   }
