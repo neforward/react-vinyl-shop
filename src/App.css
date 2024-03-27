@@ -1132,6 +1132,7 @@ body {
 }
 .back-to-top {
   display: none;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1204,6 +1205,7 @@ body {
   margin: 0;
 }
 .back-to-top img {
+  text-align: center;
   transform: rotate(-90deg);
 }
 .back-to-top.visible {

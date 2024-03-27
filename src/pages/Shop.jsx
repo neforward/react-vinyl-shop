@@ -17,7 +17,7 @@ const Shop = () => {
     const handleClick = () => {
         window.scrollTo(0, 0);
     };
-   
+
     return (
         <>
             <HeaderMain />
