@@ -6,13 +6,19 @@ import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 const Product = () => {
   const [isHovered, setIsHovered] = useState(false);
+
   const [activeContentIndex, setActiveContentIndex] = useState(0);
+
+  const vinyls = useSelector(state => state.vinyls.vinyls);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
+
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
   const handleMouseMove = (e) => {
     const element = e.target;
     const rect = element.getBoundingClientRect();
@@ -20,13 +26,24 @@ const Product = () => {
     const y = ((e.clientY - rect.top) / element.offsetHeight) * 100;
     element.style.transformOrigin = `${x}% ${y}%`;
   };
+
   const handleButtonClick = (i) => {
     setActiveContentIndex(i);
   };
+
   const { id } = useParams();
+
   const products = useSelector((state) => state.vinyls.vinyls);
+
   const product = products.find((prod) => prod.id === parseInt(id))
 
+  const getRandomVinyls = (count, currentProductId) => {
+    const filteredVinyls = vinyls.filter(vinyl => vinyl.id !== currentProductId);
+    const shuffled = filteredVinyls.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const relatedVinyls = getRandomVinyls(4, product.id);
   return (
     <>
       <HeaderMain />
@@ -158,54 +175,18 @@ const Product = () => {
                   <h2>Related Vinyls</h2>
                 </div>
                 <div className="product-items">
-                  <div className="product-item">
-                    <div className="product-item-img">
-                      <Link to='/product'>
-                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                      </Link>
-                      <button className="btn">Add to cart</button>
+                  {relatedVinyls.map((relatedProduct, index) => (
+                    <div className="product-item" key={index}>
+                      <div className="product-item-img">
+                        <img src={relatedProduct.imgUrl} alt={relatedProduct.title} />
+                        <button className="btn" onClick={() => handleAddToCart(relatedProduct)}>Add to cart</button>
+                      </div>
+                      <div className="product-item-text">
+                        <h2>{relatedProduct.title}</h2>
+                        <h5>{relatedProduct.price}</h5>
+                      </div>
                     </div>
-                    <div className="product-item-text">
-                      <h2>WHITE CHEESE</h2>
-                      <h5>$65.00</h5>
-                    </div>
-                  </div>
-                  <div className="product-item">
-                    <div className="product-item-img">
-                      <Link to='/product'>
-                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                      </Link>
-                      <button className="btn">Add to cart</button>
-                    </div>
-                    <div className="product-item-text">
-                      <h2>WHITE CHEESE</h2>
-                      <h5>$65.00</h5>
-                    </div>
-                  </div>
-                  <div className="product-item">
-                    <div className="product-item-img">
-                      <Link to='/product'>
-                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                      </Link>
-                      <button className="btn">Add to cart</button>
-                    </div>
-                    <div className="product-item-text">
-                      <h2>WHITE CHEESE</h2>
-                      <h5>$65.00</h5>
-                    </div>
-                  </div>
-                  <div className="product-item">
-                    <div className="product-item-img">
-                      <Link to='/product'>
-                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                      </Link>
-                      <button className="btn">Add to cart</button>
-                    </div>
-                    <div className="product-item-text">
-                      <h2>WHITE CHEESE</h2>
-                      <h5>$65.00</h5>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

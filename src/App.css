@@ -5,9 +5,6 @@
   box-sizing: border-box;
 }
 
-img {
-  user-select: none;
-}
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -619,7 +616,7 @@ body {
   color: #fff;
   background-color: #162e09;
   border: 1px solid;
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 90% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1002,8 +999,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  /* background-image: url("../public/arrow.svg"); */
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 75% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1025,8 +1021,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  /* background-image: url("../public/arrow2.svg"); */
-  background-image: url("./arrow2.svg");
+  background-image: url("../public/arrow2.svg");
   background-position: 85% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1664,8 +1659,7 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  /* background-image: url("../public/arrow.svg"); */
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1688,8 +1682,7 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("./arrow.svg");
-  /* background-image: url("../public/arrow.svg"); */
+  background-image: url("../public/arrow.svg");
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -1792,8 +1785,7 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  background-image: url("./arrow.svg");
-  /* background-image: url("../public/arrow.svg"); */
+  background-image: url("../public/arrow.svg");
   background-position: 95% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -2279,7 +2271,7 @@ input::-webkit-inner-spin-button {
   color: #fff;
   background-color: #162e09;
   border: 1px solid;
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 90% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -2517,7 +2509,7 @@ div.active {
   color: #fff;
   background-color: #162e09;
   border: 1px solid;
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 90% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -2611,7 +2603,7 @@ div.active {
   color: #fff;
   background-color: #162e09;
   border: 1px solid;
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 90% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
@@ -2652,6 +2644,7 @@ div.active {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 5px;
+  max-width: 280px;
 }
 .product-item-text h2:hover {
   color: #c9974e;

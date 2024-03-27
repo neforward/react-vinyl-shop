@@ -7,7 +7,6 @@ import { removeFromCart } from "../state/actions/cartAction";
 const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
-    const [totalSum, setTotalSum] = useState(0);
     const dispatch = useDispatch();
 
     const toggleMenu = () => {
@@ -34,10 +33,12 @@ const HeaderMain = () => {
     }, [sidebarActive]);
 
     const cartItems = useSelector(state => state.cart.cartItems);
+
+
+const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const handleRemoveItem = (item) => {
         dispatch(removeFromCart(item));
     };
-
     return (
         <>
             <header className="main-header">
@@ -101,7 +102,7 @@ const HeaderMain = () => {
                                                                         <button>-</button>
                                                                     </div>
                                                                     <div className="total-sum">
-                                                                        <input type="number" value={item.quantity} />
+                                                                        <input type="number" value={item.quantity} readOnly />
                                                                     </div>
                                                                     <div className="btn-plus">
                                                                         <button>+</button>
@@ -118,7 +119,7 @@ const HeaderMain = () => {
                                             </div><div className="sidebar-bottom">
                                                 <div className="sidebar-bottom-top">
                                                     <h3>Subtotal</h3>
-                                                    <h2>${totalSum.toFixed(2)}</h2>
+                                                    <h2>${totalSum}</h2>
                                                 </div>
                                                 <div className="sidebar-bottom-des">
                                                     <p>Shipping, taxes, and discounts calculated at checkout.</p>

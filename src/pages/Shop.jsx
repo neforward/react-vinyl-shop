@@ -5,6 +5,7 @@ import HeaderMain from "../components/HeaderMain"
 import ArrowTop from '../components/ArrowTop'
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../state/actions/cartAction'
+import { useEffect } from "react";
 const Shop = () => {
     const dispatch = useDispatch();
     const vinyls = useSelector(state => state.vinyls.vinyls);
@@ -13,7 +14,10 @@ const Shop = () => {
         const newItem = { ...vinyl, quantity: 1 };
         dispatch(addToCart(newItem));
     };
-    
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+   
     return (
         <>
             <HeaderMain />
@@ -26,13 +30,17 @@ const Shop = () => {
                         <select name="" id="">
                             <option value="">Default sorting</option>
                             <option value="">Sort by popularity</option>
+                            <option value="">Sort by average rating</option>
+                            <option value="">Sort by latest</option>
+                            <option value="">Sort by price: low to high</option>
+                            <option value="">Sort by price: high to low</option>
                         </select>
                     </div>
                     <div className="shop-items">
                         {vinyls.map((product, index) => (
                             <div className="shop-item" key={index}>
                                 <div className="shop-item-img">
-                                    <Link to={`/product/${product.id}`}>
+                                    <Link to={`/product/${product.id}`} onClick={handleClick}>
                                         <img src={product.imgUrl} alt={product.title} />
                                     </Link>
                                     <button className="btn" onClick={() => handleAddToCart(product)}>Add to cart</button>
