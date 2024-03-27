@@ -307,8 +307,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s ease-out, 0.3s ease-out;
-  /* background-image: url("../public/arrow.svg"); */
-  background-image: url("./arrow.svg");
+  background-image: url("../public/arrow.svg");
   background-position: 85% 50%;
   background-size: 13.714px;
   background-repeat: no-repeat;
