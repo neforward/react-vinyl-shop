@@ -32,7 +32,7 @@ const ArrowTop = () => {
                 onClick={scrollToTop}
                 title="Go to top"
             >
-                <img src="../../public/arrow.svg" alt="" />
+
             </button>
         </>
     )

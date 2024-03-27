@@ -1141,6 +1141,9 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
+  background-image: url("../public/arrow.svg");
+  background-position: 50% 50%;
+  transform: rotate(-90deg);
   background-color: #d4a65e;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1205,14 +1208,10 @@ body {
   text-align: center;
   margin: 0;
 }
-.back-to-top img {
-  text-align: center;
-  transform: rotate(-90deg);
-}
+
 .back-to-top.visible {
   display: none;
 }
-
 .main-header-cart svg {
   cursor: pointer;
   opacity: 0.5;
