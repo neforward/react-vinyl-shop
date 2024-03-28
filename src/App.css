@@ -656,7 +656,9 @@ body {
 .shop-item-img:hover button {
   display: block;
 }
-
+.shop-item-text a {
+  text-decoration: none;
+}
 .shop-item-text h2 {
   font-family: "Bebas Neue";
   font-weight: 400;
@@ -2718,6 +2720,11 @@ div.active {
   .shop-settings {
     padding-left: 30px;
     padding-right: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shop-settings .shop-items-select {
+    padding-bottom: 20px;
   }
   .shop-items {
     justify-content: center;
@@ -3113,4 +3120,77 @@ div.active {
     max-width: 300px;
     height: 300px;
   }
+}
+button.paginationBtns {
+  width: 40px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  order: 3;
+  align-items: center;
+  font-family: Poppins;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  border-right: none;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px rgba(112, 112, 112, 0.13);
+  cursor: pointer;
+}
+
+button.paginationBtns:hover {
+  color: #fff;
+  background: #162e09;
+}
+button.paginationBtns.active {
+  color: #fff;
+  background: #162e09;
+}
+button.paginationBtnPrevious {
+  background-image: url(../public/arrow2.svg);
+  background-position: 50% 50%;
+  transform: rotate(-180deg);
+  background-size: 13.714px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  order: 3;
+  align-items: center;
+  font-family: Poppins;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  border-right: none;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px rgba(112, 112, 112, 0.13);
+  cursor: pointer;
+}
+button.paginationBtnNext {
+  background-image: url(../public/arrow2.svg);
+  background-position: 50% 50%;
+  transform: rotate(360deg);
+  background-size: 13.714px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  order: 3;
+  align-items: center;
+  font-family: Poppins;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  border-right: none;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px rgba(112, 112, 112, 0.13);
+  cursor: pointer;
+}
+.paginations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
