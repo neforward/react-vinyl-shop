@@ -3122,6 +3122,7 @@ div.active {
   }
 }
 button.paginationBtns {
+  text-align: center;
   width: 40px;
   height: 50px;
   font-size: 30px;
