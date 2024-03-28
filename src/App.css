@@ -3164,8 +3164,10 @@ button.paginationBtnPrevious {
   font-weight: 500;
   text-align: center;
   border-right: none;
+
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  background-color: #fff;
 }
 button.paginationBtnPrevious:hover {
   background-position: 70% 50%;
@@ -3189,6 +3191,7 @@ button.paginationBtnNext {
   border-right: none;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  background-color: #fff;
 }
 button.paginationBtnNext:hover {
   background-position: 70% 50%;
