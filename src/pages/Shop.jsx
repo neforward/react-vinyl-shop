@@ -11,6 +11,7 @@ const Shop = () => {
     const dispatch = useDispatch();
     const vinyls = useSelector(state => state.vinyls.vinyls);
     const [currentPage, setCurrentPage] = useState(1);
+    const [searchTerm, setSearchTerm] = useState("");
     const vinylsPerPage = 9;
     const maxButtons = 5;
 
@@ -25,7 +26,7 @@ const Shop = () => {
     const totalPages = Math.ceil(vinyls.length / vinylsPerPage);
     const indexOfLastVinyl = currentPage * vinylsPerPage;
     const indexOfFirstVinyl = indexOfLastVinyl - vinylsPerPage;
-    const currentVinyls = vinyls.slice(indexOfFirstVinyl, indexOfLastVinyl);
+
 
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -49,6 +50,19 @@ const Shop = () => {
             endPage = currentPage + maxPagesAfterCurrent;
         }
     }
+    const paginateNextPrev = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    }
+    const filteredVinyls = vinyls.filter(
+        (vinyl) =>
+            vinyl.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            vinyl.artist.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    const currentVinyls = filteredVinyls.slice(
+        indexOfFirstVinyl,
+        indexOfLastVinyl
+    );
+
     return (
         <>
             <HeaderMain />
@@ -56,12 +70,24 @@ const Shop = () => {
                 <div className="main-container">
                     <div className="shop-settings">
                         <div className="shop-items-total">
-                            <h5>Showing all {((currentPage - 1) * vinylsPerPage) + 1} - {Math.min(currentPage * vinylsPerPage, vinyls.length)} of {vinyls.length} results</h5>
+                            <h5>Showing all  {((currentPage - 1) * vinylsPerPage) + 1} -{" "}
+                                {Math.min(currentPage * vinylsPerPage, filteredVinyls.length)}{" "}
+                                of {filteredVinyls.length} results</h5>
                         </div>
+                        {currentPage === 1 && (
+                            <div className="shop-items-input">
+                                <input
+                                    className="searchItemInput"
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                />
+                            </div>
+                        )}
                         <div className="shop-items-select">
                             <select name="" id="">
                                 <option value="">Default sorting</option>
-                                <option value="">Sort by popularity</option>
                                 <option value="">Sort by average rating</option>
                                 <option value="">Sort by latest</option>
                                 <option value="">Sort by price: low to high</option>
@@ -89,13 +115,13 @@ const Shop = () => {
                     </div>
                     <div className="paginations">
                         {currentPage !== 1 && (
-                            <button className="paginationBtnPrevious" onClick={() => paginate(currentPage - 1)}></button>
+                            <button className="paginationBtnPrevious" onClick={() => paginateNextPrev(currentPage - 1)}></button>
                         )}
                         {Array.from({ length: (endPage - startPage) + 1 }, (_, i) => (
                             <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} key={startPage + i} onClick={() => paginate(startPage + i)}>{startPage + i}</button>
                         ))}
                         {currentPage !== totalPages && (
-                            <button className="paginationBtnNext" onClick={() => paginate(currentPage + 1)}></button>
+                            <button className="paginationBtnNext" onClick={() => paginateNextPrev(currentPage + 1)}></button>
                         )}
                     </div>
                     <ArrowTop />

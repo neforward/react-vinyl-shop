@@ -1052,6 +1052,7 @@ body {
   font-family: Poppins;
   padding: 13px 15px;
 }
+
 .second-side-inputs input {
   background-color: transparent;
   border: #e2e2e2 solid 1px;
@@ -1835,6 +1836,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 20px;
   max-width: 100%;
 }
+
 .checkout-one input {
   background-color: #fff;
   border: 1px solid hsla(0, 0%, 7%, 0.8);
@@ -3202,7 +3204,22 @@ button.paginationBtnNext:hover {
   align-items: center;
   max-width: 100%;
 }
-
+.shop-items-input {
+  padding-bottom: 20px;
+}
 @media screen and (max-width: 700px) {
-
+}
+input.searchItemInput {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #2b2d2f;
+  font-family: Poppins;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0;
+  min-height: 0;
+  padding: 5px 20px 5px 20px;
+  width: 100%;
 }

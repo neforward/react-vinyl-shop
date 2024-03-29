@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../state/actions/cartAction";
+import { decrementCartItem, removeFromCart } from "../state/actions/cartAction";
+import { incrementCartItem } from "../state/actions/cartAction";
 const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
@@ -35,10 +36,27 @@ const HeaderMain = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
 
 
-const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const handleRemoveItem = (item) => {
         dispatch(removeFromCart(item));
     };
+
+
+    const handleDecrement = (item) => {
+        if (item.quantity > 1) {
+
+            const updatedItem = { ...item, quantity: item.quantity - 1 };
+            dispatch(decrementCartItem(updatedItem));
+        }
+    };
+    const handleIncrement = (item) => {
+        const updatedItem = { ...item, quantity: item.quantity + 1 };
+        dispatch(incrementCartItem(updatedItem))
+    };
+    const getTotalItemCount = () => {
+        return cartItems.reduce((total, item) => total + item.quantity, 0);
+    };
+
     return (
         <>
             <header className="main-header">
@@ -79,7 +97,7 @@ const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quanti
                                     ) : (
                                         <>
                                             <div className="sidebar-top">
-                                                <h2>YOUR CART ({cartItems.length} ITEM{cartItems.length !== 1 ? 'S' : ''})</h2>
+                                                <h2>YOUR CART ({getTotalItemCount()} ITEM{getTotalItemCount() !== 1 ? 'S' : ''})</h2>
                                                 <IoMdClose size={30} onClick={toggleSidebar} /></div><div className="bought-items">
                                                 {cartItems.map((item, index) => (
                                                     <div className="bought-item" key={index}>
@@ -98,13 +116,13 @@ const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quanti
                                                             </div>
                                                             <div className="bought-flex">
                                                                 <div className="bought-item-plus-minus">
-                                                                    <div className="btn-minus">
+                                                                    <div className="btn-minus" onClick={() => handleDecrement(item)}>
                                                                         <button>-</button>
                                                                     </div>
                                                                     <div className="total-sum">
                                                                         <input type="number" value={item.quantity} readOnly />
                                                                     </div>
-                                                                    <div className="btn-plus">
+                                                                    <div className="btn-plus" onClick={() => handleIncrement(item)}>
                                                                         <button>+</button>
                                                                     </div>
                                                                 </div>
@@ -119,7 +137,7 @@ const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quanti
                                             </div><div className="sidebar-bottom">
                                                 <div className="sidebar-bottom-top">
                                                     <h3>Subtotal</h3>
-                                                    <h2>${totalSum}</h2>
+                                                    <h2>${(totalSum).toFixed(2)}</h2>
                                                 </div>
                                                 <div className="sidebar-bottom-des">
                                                     <p>Shipping, taxes, and discounts calculated at checkout.</p>
@@ -135,7 +153,6 @@ const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quanti
                                             </div>
                                         </>
                                     )}</div>
-
                             </div>
                         </div>
                         <div className="responsive-logo">
@@ -163,3 +180,4 @@ const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quanti
 }
 
 export default HeaderMain;
+

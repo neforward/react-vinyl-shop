@@ -369,7 +369,7 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Juice WRLD',
-                imgUrl: 'https://recordstore.co.uk/cdn/shop/products/SharedImage-114908.png?v=1700568331',
+                imgUrl: 'https://thesoundofvinyl.com/cdn/shop/products/SharedImage-114908.png?v=1700568332',
                 title: 'GOODBYE & GOOD RIDDANCE',
                 price: '25.99',
                 id: 41,
@@ -698,6 +698,142 @@ export const vinylsSlice = createSlice({
                 price: '370.00',
                 id: 77,
                 des: `Music. Currents features styles of psychedelic pop, disco, R&B, and electropop, but the album's chord progressions and rhythms are most indebted to R&B. Kevin Parker listened to R&B from the 1990s during recording, which he had forced himself to reject while growing up due to peer pressures. `
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Chance the Rapper',
+                imgUrl: 'https://thevinylfactory.com/wp-content/uploads/2019/06/ar-vinyl2.png',
+                title: 'Acid Rap',
+                price: '29.89',
+                id: 78,
+                des: ``
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Chance the Rapper',
+                imgUrl: 'https://thevinylfactory.com/wp-content/uploads/2019/06/cb-vinyl2.png',
+                title: 'Coloring Book',
+                price: '34.90',
+                id: 79,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Eminem',
+                imgUrl: 'https://recordstore.co.uk/cdn/shop/products/SharedImage-113898_c23a39b7-5f73-41bd-bba1-c68178511595.png?v=1700578628',
+                title: 'The Eminem Show',
+                price: '34.50',
+                id: 80,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Denzel Curry',
+                imgUrl: 'https://i.ebayimg.com/images/g/lP0AAOSwO0hi6bHs/s-l1600.jpg',
+                title: 'Ta13oo',
+                price: '23.44',
+                id: 81,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Earl Sweatshirt',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/Earl-Sweatshirt-SRS_1024x1024.png?v=1634268250',
+                title: 'Some Rap Songs',
+                price: '45.67',
+                id: 82,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Earl Sweatshirt',
+                imgUrl: 'https://store.earlsweatshirt.com/on/demandware.static/-/Sites-warner-master/default/dwd6610706/pdp-img/earl%20sweatshirt/music/SICK!%20Dark%20Blue%20LP.png',
+                title: 'SICK!',
+                price: '32.90',
+                id: 83,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Migos',
+                imgUrl: 'https://shop.motownrecords.com/cdn/shop/files/CULTUREII3LP.png?v=1690913458',
+                title: 'CULTURE II',
+                price: '56.89',
+                id: 84,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Jay-z',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/files/BLUEPRINT-3_1024x1024.png?v=1686884297',
+                title: 'BLUEPRINT 3',
+                price: '31.54',
+                id: 85,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }
+            ,
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'XXXTENTACION',
+                imgUrl: 'https://thesoundofvinyl.us/cdn/shop/products/XXXT_0001-Updated-vinyl_1024x1024.png?v=1666368709',
+                title: '?',
+                price: '55.44',
+                id: 86,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }
+            ,
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Tyler, The Creator',
+                imgUrl: 'https://static.wixstatic.com/media/28a537_92bc674c734f4e20852c2b06a06f6317~mv2.png/v1/fill/w_800,h_800,al_c,q_90,enc_auto/28a537_92bc674c734f4e20852c2b06a06f6317~mv2.png',
+                title: 'cherry bomb',
+                price: '23.40',
+                id: 87,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'JPEGMAFIA',
+                imgUrl: 'https://freight.cargo.site/t/original/i/cdcd4dc9b3cdc32158302c414b5e3913e0e0d21d06c78006acd9e1af62847caf/JPEGMAFIA_LP-3.png',
+                title: 'LP!',
+                price: '39.89',
+                id: 88,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }
+            ,
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Lil Uzi Vert',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/liluzivert-vsworld-rsd_2000x2000.jpg?v=1571264822',
+                title: 'Lil Uzi Vert Vs. The World',
+                price: '20.95',
+                id: 89,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: 'R&B/Soul',
+                artist: 'The Weeknd',
+                imgUrl: 'https://shop.republicrecords.com/cdn/shop/files/Starboy_grande.png?v=1697743841',
+                title: 'Starboy',
+                price: '45.90',
+                id: 90,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }, {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }, {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
             },
         ],
     },
