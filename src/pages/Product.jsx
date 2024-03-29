@@ -1,16 +1,40 @@
-import { useState } from 'react';
-import HeaderMain from '../components/HeaderMain'
-import Footer from '../components/Footer'
+import { useState, useEffect } from 'react';
+import HeaderMain from '../components/HeaderMain';
+import Footer from '../components/Footer';
 import { PiStarDuotone } from "react-icons/pi";
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../state/actions/cartAction';
+import { addToCart, removeFromCart, decrementCartItem, incrementCartItem, updateProductQuantity } from '../state/actions/cartAction';
+
 
 const Product = () => {
+  const { id } = useParams();
+  const products = useSelector((state) => state.vinyls.vinyls);
+  const product = products.find((prod) => prod.id === parseInt(id));
+
+  const cartItems = useSelector(state => state.cart.cartItems);
+  const productInCart = cartItems.find(item => item.id === product.id);
+  const initialQuantity = productInCart ? productInCart.quantity : 0;
+
+  const [quantity, setQuantity] = useState(initialQuantity);
   const [isHovered, setIsHovered] = useState(false);
   const [activeContentIndex, setActiveContentIndex] = useState(0);
   const dispatch = useDispatch();
   const vinyls = useSelector(state => state.vinyls.vinyls);
+
+  useEffect(() => {
+    if (productInCart) {
+      setQuantity(productInCart.quantity);
+    } else {
+      setQuantity(0);
+    }
+  }, [productInCart]);
+
+  const handleQuantityChange = e => {
+    const newQuantity = parseInt(e.target.value);
+    setQuantity(newQuantity);
+    dispatch(updateProductQuantity(product.id, newQuantity));
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -32,12 +56,6 @@ const Product = () => {
     setActiveContentIndex(i);
   };
 
-  const { id } = useParams();
-
-  const products = useSelector((state) => state.vinyls.vinyls);
-
-  const product = products.find((prod) => prod.id === parseInt(id))
-
   const getRandomVinyls = (count, currentProductId) => {
     const filteredVinyls = vinyls.filter(vinyl => vinyl.id !== currentProductId);
     const shuffled = filteredVinyls.sort(() => 0.5 - Math.random());
@@ -45,9 +63,27 @@ const Product = () => {
   };
 
   const relatedVinyls = getRandomVinyls(4, product.id);
+
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
   };
+
+  const handleRemoveFromCart = (product) => {
+    dispatch(removeFromCart(product));
+  };
+
+  const handleDecrementCartItem = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+      dispatch(decrementCartItem(product));
+    }
+  };
+
+  const handleIncrementCartItem = () => {
+    setQuantity(quantity + 1);
+    dispatch(incrementCartItem(product));
+  };
+
   return (
     <>
       <HeaderMain />
@@ -76,21 +112,20 @@ const Product = () => {
               <div className="product-text">
                 <div className="first-product-text">
                   <h2>{product.title}</h2>
-                  <h6>{product.price}</h6>
+                  <h6>${product.price}</h6>
                   <p>{product.des}</p>
                 </div>
                 <div className="product-btns">
                   <div className="product-quantity">
                     <div className="product-quantity-plus-minus">
                       <div className="product-quantity-total-sum">
-                        <input type="number" />
+                        <input type="number" value={quantity} onChange={handleQuantityChange} />
                       </div>
                       <div className="product-quantity-btns">
-                        <div className="product-quantity-btn-minus">
+                        <div className="product-quantity-btn-minus" onClick={handleDecrementCartItem}>
                           <button>-</button>
                         </div>
-
-                        <div className="product-quantity-btn-plus">
+                        <div className="product-quantity-btn-plus" onClick={handleIncrementCartItem}>
                           <button>+</button>
                         </div>
                       </div>
@@ -191,7 +226,7 @@ const Product = () => {
                       </div>
                     </div>
                   ))}
-                 </div>
+                </div>
               </div>
             </div>
           </div>
