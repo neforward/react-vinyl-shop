@@ -195,10 +195,11 @@ export const vinylsSlice = createSlice({
                 price: "39.99",
                 id: 21,
                 des: `"After Hours" is an electrifying album released by Canadian artist The Weeknd in 2020. With its dark and atmospheric soundscapes, the album delves into themes of love, heartbreak, and self-reflection. Tracks like "Blinding Lights" and "Save Your Tears" showcase The Weeknd's trademark blend of R&B, pop, and synth-pop, while also exploring new sonic territories. "After Hours" received widespread acclaim for its innovative production, haunting vocals, and emotionally resonant lyrics, solidifying The Weeknd's position as one of the most compelling artists of his generation.`
-            }, {
+            }, 
+            {
                 genre: 'R&B/Soul',
                 artist: 'The Weeknd',
-                imgUrl: "https://recordstore.co.uk/cdn/shop/products/SharedImage-123519.png?v=1695285726",
+                imgUrl: "https://sound-merch.com.au/cdn/shop/products/HOUSE-OF-BALLOONS_1024x1024.png?v=1656386126",
                 title: "House of Balloons",
                 price: "48.99",
                 id: 22,
@@ -819,6 +820,24 @@ export const vinylsSlice = createSlice({
                 id: 90,
                 des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
             }, {
+                genre: 'R&B/Soul',
+                artist: 'The Weeknd',
+                imgUrl: 'https://shop.urbanlegends.com/cdn/shop/products/TheWeeknd-BeautyBehindTheMadness-2LP-Vinyl.png?v=1597255069',
+                title: 'Beauty Behind The Madness',
+                price: '38.98',
+                id: 91,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            }, 
+            {
+                genre: 'R&B/Soul',
+                artist: 'The Weeknd',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/files/THE-WEEKND_1024x1024.png?v=1692331052',
+                title: 'Thursday',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
                 genre: '',
                 artist: '',
                 imgUrl: '',
@@ -826,7 +845,44 @@ export const vinylsSlice = createSlice({
                 price: '',
                 id: 0,
                 des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
-            }, {
+            },
+            {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
+                genre: '',
+                artist: '',
+                imgUrl: '',
+                title: '',
+                price: '',
+                id: 0,
+                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
+            },
+            {
                 genre: '',
                 artist: '',
                 imgUrl: '',

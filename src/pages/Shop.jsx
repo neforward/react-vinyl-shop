@@ -118,7 +118,10 @@ const Shop = () => {
                             <button className="paginationBtnPrevious" onClick={() => paginateNextPrev(currentPage - 1)}></button>
                         )}
                         {Array.from({ length: (endPage - startPage) + 1 }, (_, i) => (
-                            <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} key={startPage + i} onClick={() => paginate(startPage + i)}>{startPage + i}</button>
+                            <div className="btns-centered">
+                                <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} key={startPage + i} onClick={() => paginate(startPage + i)}>{startPage + i}</button>
+                            </div>
+
                         ))}
                         {currentPage !== totalPages && (
                             <button className="paginationBtnNext" onClick={() => paginateNextPrev(currentPage + 1)}></button>
