@@ -648,10 +648,7 @@ body {
     top: 45%;
   }
 }
-.shop-item-img:hover img {
-  border-color: rgba(112, 112, 112, 0.5);
-  opacity: 0.3;
-}
+
 
 .shop-item-img:hover button {
   display: block;
@@ -3245,3 +3242,29 @@ input.searchItemInput {
     display: none;
   }
 }
+.shop-item-img .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.shop-item-img .normal-image,
+.shop-item-img .hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.shop-item-img .hover-image {
+  opacity: 0;
+  z-index: 1;
+}
+
+.shop-item-img:hover .normal-image {
+  opacity: 0;
+}
+
+.shop-item-img:hover .hover-image {
+  opacity: 1;
+}
+

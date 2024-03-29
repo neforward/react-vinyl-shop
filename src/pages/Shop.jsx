@@ -1,24 +1,23 @@
-
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer"
 import HeaderMain from "../components/HeaderMain"
 import ArrowTop from '../components/ArrowTop'
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../state/actions/cartAction'
+import { useSelector } from 'react-redux';
+// import { addToCart } from '../state/actions/cartAction'
 import { useState } from "react";
 
 const Shop = () => {
-    const dispatch = useDispatch();
     const vinyls = useSelector(state => state.vinyls.vinyls);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
     const vinylsPerPage = 9;
     const maxButtons = 5;
-
-    const handleAddToCart = (vinyl) => {
-        const newItem = { ...vinyl, quantity: 1 };
-        dispatch(addToCart(newItem));
-    };
+    const [sortBy, setSortBy] = useState("");
+    // const handleAddToCart = (vinyl) => {
+    //     const newItem = { ...vinyl, quantity: 1 };
+    //     dispatch(addToCart(newItem));
+    // };
+  
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -58,10 +57,23 @@ const Shop = () => {
             vinyl.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             vinyl.artist.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    const currentVinyls = filteredVinyls.slice(
+
+    const sortedVinyls = [...filteredVinyls];
+    if (sortBy === "latest") {
+        sortedVinyls.sort((a, b) => new Date(a.date) - new Date(b.date));
+        sortedVinyls.reverse();
+    } else if (sortBy === "price-low") {
+        sortedVinyls.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "price-high") {
+        sortedVinyls.sort((a, b) => b.price - a.price);
+    }
+
+    const currentVinyls = sortedVinyls.slice(
         indexOfFirstVinyl,
         indexOfLastVinyl
     );
+
+
 
     return (
         <>
@@ -86,23 +98,23 @@ const Shop = () => {
                             </div>
                         )}
                         <div className="shop-items-select">
-                            <select name="" id="">
+                            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                                 <option value="">Default sorting</option>
-                                <option value="">Sort by average rating</option>
-                                <option value="">Sort by latest</option>
-                                <option value="">Sort by price: low to high</option>
-                                <option value="">Sort by price: high to low</option>
+                                <option value="latest">Sort by latest</option>
+                                <option value="price-low">Sort by price: low to high</option>
+                                <option value="price-high">Sort by price: high to low</option>
                             </select>
                         </div>
                     </div>
                     <div className="shop-items">
-                        {currentVinyls.map((product, index) => (
-                            <div className="shop-item" key={index}>
+                        {currentVinyls.map((product) => (
+                            <div className="shop-item" key={product.id}>
                                 <div className="shop-item-img">
                                     <Link to={`/product/${product.id}`} onClick={scrollToTop}>
                                         <img src={product.imgUrl} alt={product.title} />
+                                        <img src={product.hover} className="hover-image" />
                                     </Link>
-                                    <button className="btn" onClick={() => handleAddToCart(product)}>Add to cart</button>
+                                    {/* <button className="btn" onClick={() => handleAddToCart(product)}>Add to cart</button> */}
                                 </div>
                                 <div className="shop-item-text">
                                     <Link to={`/product/${product.id}`} onClick={scrollToTop}>
@@ -118,10 +130,13 @@ const Shop = () => {
                             <button className="paginationBtnPrevious" onClick={() => paginateNextPrev(currentPage - 1)}></button>
                         )}
                         {Array.from({ length: (endPage - startPage) + 1 }, (_, i) => (
-                            <div className="btns-centered">
-                                <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} key={startPage + i} onClick={() => paginate(startPage + i)}>{startPage + i}</button>
+                            <div className="btns-centered" key={startPage + i}>
+                                <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} onClick={() => paginate(startPage + i)}>
+                                    {startPage + i}
+                                </button>
                             </div>
                         ))}
+
                         {currentPage !== totalPages && (
                             <button className="paginationBtnNext" onClick={() => paginateNextPrev(currentPage + 1)}></button>
                         )}

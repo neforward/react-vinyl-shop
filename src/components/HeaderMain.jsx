@@ -99,7 +99,8 @@ const HeaderMain = () => {
                                         <>
                                             <div className="sidebar-top">
                                                 <h2>YOUR CART ({getTotalItemCount()} ITEM{getTotalItemCount() !== 1 ? 'S' : ''})</h2>
-                                                <IoMdClose size={30} onClick={toggleSidebar} /></div><div className="bought-items">
+                                                <IoMdClose size={30} onClick={toggleSidebar} /></div>
+                                                <div className="bought-items">
                                                 {cartItems.map((item, index) => (
                                                     <div className="bought-item" key={index}>
                                                         <div className="bought-item-img">
