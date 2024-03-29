@@ -3117,7 +3117,7 @@ div.active {
     justify-content: center;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
   .shop-item-img img {
     max-width: 300px;
     height: 300px;
