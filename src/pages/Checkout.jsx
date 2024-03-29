@@ -7,7 +7,7 @@ const Checkout = () => {
         window.scrollTo(0, 0);
     };
     const cartItems = useSelector(state => state.cart.cartItems);
-
+    const total = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)
     return (
         <>
             <HeaderMain />
@@ -93,20 +93,20 @@ const Checkout = () => {
                                             <div className="checkout-flex">
                                                 <h6>{item.title}</h6>
                                                 <h4>${item.price}</h4>
-                                                <p>{item.description}</p>
+                                                <p>{item.des}</p>
                                             </div>
-                                            <h5>${item.price * item.quantity}</h5>
+                                            <h5>${(total).toFixed(2)}</h5>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                             <div className="checkout-subtotal">
                                 <h4>Subtotal</h4>
-                                <h5>${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</h5>
+                                <h5>${(total).toFixed(2)}</h5>
                             </div>
                             <div className="checkout-total">
                                 <h4>Total</h4>
-                                <h5>${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</h5>
+                                <h5>${(total).toFixed(2)}</h5>
                             </div>
                         </div>
                     </div>

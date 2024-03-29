@@ -32,12 +32,10 @@ const Cart = () => {
         dispatch(incrementCartItem(updatedItem))
     };
     const getSubtotal = (item) => {
-        return item.price * item.quantity;
+        return (item.price * item.quantity).toFixed(2)
     };
 
-    const getTotalSubtotal = () => {
-        return cartItems.reduce((total, item) => total + getSubtotal(item), 0);
-    };
+
     return (
         <>
             <HeaderMain />
@@ -110,12 +108,12 @@ const Cart = () => {
                         <div className="cart-totals-flex">
                             <div className="cart-totals-subtotal">
                                 <h4>Subtotal</h4>
-                                <h5>${getTotalSubtotal()}</h5>
+                                <h5>${getSubtotal(item)}</h5>
                             </div>
 
                             <div className="cart-totals-total">
                                 <h4>Total</h4>
-                                <h5>${getTotalSubtotal()}</h5>
+                                <h5>${getSubtotal(item)}</h5>
                             </div>
                         </div>
                         <Link to='/checkout'>
