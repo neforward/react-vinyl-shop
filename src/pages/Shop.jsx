@@ -121,7 +121,6 @@ const Shop = () => {
                             <div className="btns-centered">
                                 <button className={`paginationBtns ${currentPage === startPage + i ? "active" : ""}`} key={startPage + i} onClick={() => paginate(startPage + i)}>{startPage + i}</button>
                             </div>
-
                         ))}
                         {currentPage !== totalPages && (
                             <button className="paginationBtnNext" onClick={() => paginateNextPrev(currentPage + 1)}></button>
