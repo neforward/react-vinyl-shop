@@ -1,6 +1,13 @@
 import HeaderMain from "../components/HeaderMain"
 import Footer from '../components/Footer'
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux";
 const Checkout = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
+    const cartItems = useSelector(state => state.cart.cartItems);
+
     return (
         <>
             <HeaderMain />
@@ -68,49 +75,38 @@ const Checkout = () => {
                                 <span>By proceeding with your purchase you agree to our Terms and Conditions and Privacy Policy</span>
                             </div>
                             <div className="checkout-btns">
-                                <button className="checkout-back">Return to Cart</button>
+                                <Link to='/cart'>
+                                    <button onClick={scrollToTop} className="checkout-back">Return to Cart</button>
+                                </Link>
                                 <button className="place-order">Place Order</button>
                             </div>
                         </div>
                         <div className="checkout-items">
                             <h2>Order Summary</h2>
-                            <div className="checkout-item">
-                                <div className="checkout-item-flex">
-                                    <div className="checkout-img">
-                                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                                    </div>
-                                    <div className="checkout-flex-flex">
-                                        <div className="checkout-flex">
-                                            <h6>Fresh milk</h6>
-                                            <h4>$50.00</h4>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
+                            {cartItems.map((item, index) => (
+                                <div className="checkout-item" key={index}>
+                                    <div className="checkout-item-flex">
+                                        <div className="checkout-img">
+                                            <img src={item.imgUrl} alt="" />
                                         </div>
-                                        <h5>$100.00</h5>
+                                        <div className="checkout-flex-flex">
+                                            <div className="checkout-flex">
+                                                <h6>{item.title}</h6>
+                                                <h4>${item.price}</h4>
+                                                <p>{item.description}</p>
+                                            </div>
+                                            <h5>${item.price * item.quantity}</h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="checkout-item">
-                                <div className="checkout-item-flex">
-                                    <div className="checkout-img">
-                                        <img src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg" alt="" />
-                                    </div>
-                                    <div className="checkout-flex-flex">
-                                        <div className="checkout-flex">
-                                            <h6>Fresh milk</h6>
-                                            <h4>$50.00</h4>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
-                                        </div>
-                                        <h5>$100.00</h5>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                             <div className="checkout-subtotal">
                                 <h4>Subtotal</h4>
-                                <h5>$200.00</h5>
+                                <h5>${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</h5>
                             </div>
                             <div className="checkout-total">
                                 <h4>Total</h4>
-                                <h5>$200.00</h5>
+                                <h5>${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</h5>
                             </div>
                         </div>
                     </div>

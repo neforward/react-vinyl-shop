@@ -3,30 +3,40 @@ import HeaderMain from "../components/HeaderMain"
 import Footer from '../components/Footer'
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+
+import { decrementCartItem, removeFromCart, incrementCartItem } from "../state/actions/cartAction";
 const Cart = () => {
-    const [quantities, setQuantities] = useState([1, 1, 1]);
-
-    const increaseQuantity = (i) => {
-        const newQuantities = [...quantities];
-        newQuantities[i] += 1;
-        setQuantities(newQuantities);
-    };
-
-    const decreaseQuantity = (i) => {
-        const newQuantities = [...quantities];
-        if (newQuantities[i] > 1) {
-            newQuantities[i] -= 1;
-            setQuantities(newQuantities);
-        }
-    };
-    const removeItem = (i) => {
-        const newQuantities = [...quantities];
-        newQuantities.splice(i, 1);
-        setQuantities(newQuantities);
-    };
+    const dispatch = useDispatch();
+    const cartItems = useSelector(state => state.cart.cartItems);
     const updateCart = () => {
         window.location.reload();
+    };
+    const handleRemoveItem = (item) => {
+        dispatch(removeFromCart(item));
+    };
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
+
+    const handleDecrement = (item) => {
+        if (item.quantity > 1) {
+
+            const updatedItem = { ...item, quantity: item.quantity - 1 };
+            dispatch(decrementCartItem(updatedItem));
+        }
+    };
+    const handleIncrement = (item) => {
+        const updatedItem = { ...item, quantity: item.quantity + 1 };
+        dispatch(incrementCartItem(updatedItem))
+    };
+    const getSubtotal = (item) => {
+        return item.price * item.quantity;
+    };
+
+    const getTotalSubtotal = () => {
+        return cartItems.reduce((total, item) => total + getSubtotal(item), 0);
     };
     return (
         <>
@@ -48,42 +58,42 @@ const Cart = () => {
                                 <h2>Subtotal</h2>
                             </div>
                         </div>
-                        {quantities.map((quantity, index) => (
+                        {cartItems.map((item, index) => (
                             <div className="cart-item" key={index}>
                                 <div className="first-cart-flex">
-                                    <div className="remove-btn" onClick={() => removeItem(index)}>
+                                    <div className="remove-btn" onClick={() => handleRemoveItem(item)}>
                                         <IoMdClose />
                                     </div>
                                     <div className="cart-item-img">
                                         <img
-                                            src="https://beymaral-honey.com/wp-content/uploads/2023/03/product-21.jpg"
+                                            src={item.imgUrl}
                                             alt=""
                                         />
                                     </div>
                                     <div className="cart-item-name">
-                                        <h3>Fresh Milk</h3>
+                                        <h3>{item.title}</h3>
                                     </div>
                                 </div>
                                 <div className="cart-price">
-                                    <h4>$50.00</h4>
+                                    <h4>${item.price}</h4>
                                 </div>
                                 <div className="cart-quantity">
                                     <div className="cart-quantity-plus-minus">
                                         <div className="cart-quantity-total-sum">
-                                            <input type="number" value={quantity} readOnly />
+                                            <input type="number" value={item.quantity} readOnly />
                                         </div>
                                         <div className="cart-quantity-btns">
-                                            <div className="cart-quantity-btn-minus">
-                                                <button onClick={() => decreaseQuantity(index)}>-</button>
+                                            <div className="cart-quantity-btn-minus" onClick={() => handleDecrement(item)}>
+                                                <button>-</button>
                                             </div>
-                                            <div className="cart-quantity-btn-plus">
-                                                <button onClick={() => increaseQuantity(index)}>+</button>
+                                            <div className="cart-quantity-btn-plus" onClick={() => handleIncrement(item)}>
+                                                <button>+</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="cart-subtotal">
-                                    <h4>${(quantity * 50).toFixed(2)}</h4>
+                                    <h4>${getSubtotal(item)}</h4>
                                 </div>
                             </div>
                         ))}
@@ -100,16 +110,16 @@ const Cart = () => {
                         <div className="cart-totals-flex">
                             <div className="cart-totals-subtotal">
                                 <h4>Subtotal</h4>
-                                <h5>${(quantities.reduce((acc, qty) => acc + qty, 0) * 50).toFixed(2)}</h5>
+                                <h5>${getTotalSubtotal()}</h5>
                             </div>
 
                             <div className="cart-totals-total">
                                 <h4>Total</h4>
-                                <h5>${(quantities.reduce((acc, qty) => acc + qty, 0) * 50).toFixed(2)}</h5>
+                                <h5>${getTotalSubtotal()}</h5>
                             </div>
                         </div>
                         <Link to='/checkout'>
-                            <button>Proceed to checkout</button>
+                            <button onClick={scrollToTop}>Proceed to checkout</button>
                         </Link>
                     </div>
                 </div>

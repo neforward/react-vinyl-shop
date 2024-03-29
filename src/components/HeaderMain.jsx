@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import { decrementCartItem, removeFromCart } from "../state/actions/cartAction";
-import { incrementCartItem } from "../state/actions/cartAction";
+import { decrementCartItem, removeFromCart, incrementCartItem } from "../state/actions/cartAction";
 const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
@@ -90,9 +89,11 @@ const HeaderMain = () => {
                                         <div className="side-bar-empty">
                                             <h2>cart is empty</h2>
                                             <p>add at least one vinyl please</p>
-                                            <div className="empty-btn">
-                                                <button onClick={toggleSidebar}>Get Back</button>
-                                            </div>
+                                            <Link to='/shop'>
+                                                <div className="empty-btn">
+                                                    <button onClick={toggleSidebar}>Go Back To Shopping</button>
+                                                </div>
+                                            </Link>
                                         </div>
                                     ) : (
                                         <>
