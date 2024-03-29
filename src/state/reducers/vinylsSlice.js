@@ -523,7 +523,7 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Outkast',
-                imgUrl: 'https://i.ebayimg.com/images/g/qFEAAOSwQ3Rj7Tfx/s-l1600.png',
+                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/ATLIENS_1024x1024.png?v=1668638715',
                 title: 'atliens',
                 price: '48.99',
                 id: 58,
@@ -730,7 +730,7 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Denzel Curry',
-                imgUrl: 'https://i.ebayimg.com/images/g/lP0AAOSwO0hi6bHs/s-l1600.jpg',
+                imgUrl: 'https://img.broadtime.com/Photo/418467223314',
                 title: 'Ta13oo',
                 price: '23.44',
                 id: 81,
