@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import { PiStarDuotone } from "react-icons/pi";
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart, decrementCartItem, incrementCartItem, updateProductQuantity } from '../state/actions/cartAction';
+import { addToCart, decrementCartItem, incrementCartItem, updateProductQuantity } from '../state/actions/cartAction';
 
 
 const Product = () => {
@@ -66,10 +66,6 @@ const Product = () => {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
-  };
-
-  const handleRemoveFromCart = (product) => {
-    dispatch(removeFromCart(product));
   };
 
   const handleDecrementCartItem = () => {

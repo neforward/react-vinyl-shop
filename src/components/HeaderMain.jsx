@@ -7,7 +7,20 @@ import { decrementCartItem, removeFromCart, incrementCartItem } from "../state/a
 const HeaderMain = () => {
     const [isActive, setIsActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
+    const cartItems = useSelector(state => state.cart.cartItems);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        const storedCartItems = localStorage.getItem('cartItems');
+        if (storedCartItems) {
+            const parsedCartItems = JSON.parse(storedCartItems);
+            dispatch({ type: 'INITIALIZE_CART', payload: parsedCartItems });
+        }
+    }, [dispatch]);
+
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
     const toggleMenu = () => {
         setIsActive(!isActive);
@@ -32,7 +45,7 @@ const HeaderMain = () => {
         };
     }, [sidebarActive]);
 
-    const cartItems = useSelector(state => state.cart.cartItems);
+ 
 
 
     const totalSum = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
