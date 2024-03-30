@@ -2242,6 +2242,9 @@ input::-webkit-inner-spin-button {
   border: solid 1px rgba(112, 112, 112, 0.13);
   width: 25px;
   height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   font-family: Poppins;
   cursor: pointer;
@@ -2591,7 +2594,6 @@ div.active {
     display: flex;
   }
 }
-
 .product-item-img img {
   max-width: 280px;
   height: 280px;
@@ -3259,6 +3261,21 @@ input.searchItemInput {
 }
 
 .shop-item-img:hover .hover-image {
+  opacity: 1;
+}
+.image-product {
+  position: relative;
+}
+
+.hover-image-product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-product:hover .hover-image-product {
   opacity: 1;
 }
 

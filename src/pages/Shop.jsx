@@ -72,9 +72,6 @@ const Shop = () => {
         indexOfFirstVinyl,
         indexOfLastVinyl
     );
-
-
-
     return (
         <>
             <HeaderMain />

@@ -107,7 +107,10 @@ const Product = () => {
                     }}>
                   </div>
                 </div>
-                <img src={product.imgUrl} alt="" />
+                <div className="image-product">
+                  <img src={product.imgUrl} className='poa-image' />
+                  <img src={product.hover} className="hover-image-product" />
+                </div>
               </div>
               <div className="product-text">
                 <div className="first-product-text">
