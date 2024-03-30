@@ -7,6 +7,10 @@ const Header = () => {
     const toggleMenu = () => {
         setIsActive(!isActive);
     }
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <>
             <header className='header'>
@@ -25,11 +29,11 @@ const Header = () => {
                         <nav className={`nav ${isActive ? 'active' : ''}`}>
                             <div className="span-container">
                                 <div className="span-flex">
-                                    <Link to='/'>HOME</Link>
-                                    <Link to='/about'>ABOUT US</Link>
-                                    <Link to='/doing'>WHAT WE DO</Link>
-                                    <Link to='/shop'>SHOP</Link>
-                                    <Link to='/contact'>CONTACT US</Link>
+                                    <Link to='/'><span onClick={scrollToTop}>HOME</span></Link>
+                                    <Link to='/about'><span onClick={scrollToTop}>ABOUT US</span></Link>
+                                    <Link to='/doing'><span onClick={scrollToTop}>WHAT WE DO</span></Link>
+                                    <Link to='/shop'><span onClick={scrollToTop}>SHOP</span></Link>
+                                    <Link to='/contact'><span onClick={scrollToTop}>CONTACT US</span></Link>
                                 </div>
                             </div>
                         </nav>
