@@ -55,7 +55,9 @@ const HeaderMain = () => {
     const getTotalItemCount = () => {
         return cartItems.reduce((total, item) => total + item.quantity, 0);
     };
-
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <>
             <header className="main-header">
@@ -100,7 +102,7 @@ const HeaderMain = () => {
                                             <div className="sidebar-top">
                                                 <h2>YOUR CART ({getTotalItemCount()} ITEM{getTotalItemCount() !== 1 ? 'S' : ''})</h2>
                                                 <IoMdClose size={30} onClick={toggleSidebar} /></div>
-                                                <div className="bought-items">
+                                            <div className="bought-items">
                                                 {cartItems.map((item, index) => (
                                                     <div className="bought-item" key={index}>
                                                         <div className="bought-item-img">
@@ -168,11 +170,11 @@ const HeaderMain = () => {
                             <span className="bar"></span>
                         </div>
                         <div className={`main-menu ${isActive ? 'active' : ''}`}>
-                            <Link to='/'>HOME</Link>
-                            <Link to='/about'>ABOUT US</Link>
-                            <Link to='/doing'>WHAT WE DO</Link>
-                            <Link to='/shop'>SHOP</Link>
-                            <Link to='/contact'>CONTACT US</Link>
+                            <Link to='/' onClick={scrollToTop}><span onClick={toggleMenu}>HOME</span></Link>
+                            <Link to='/about' onClick={scrollToTop}><span onClick={toggleMenu}>ABOUT US</span></Link>
+                            <Link to='/doing' onClick={scrollToTop}><span onClick={toggleMenu}>WHAT WE DO</span></Link>
+                            <Link to='/shop' onClick={scrollToTop}><span onClick={toggleMenu}>SHOP</span></Link>
+                            <Link to='/contact' onClick={scrollToTop}><span onClick={toggleMenu}>CONTACT US</span></Link>
                         </div>
                     </div>
                 </div>

@@ -141,9 +141,10 @@ const Product = () => {
                 <div className="product-share">
                   <h3>Share:</h3>
                   <div className="product-links">
-                    <a href="">Facebook</a>
-                    <a href="">Twitter</a>
-                    <a href="">LinkedIn</a>
+                    <a href="https://www.instagram.com/neforward/" target="_blank">Instagram</a>
+                    <a href="https://t.me/jopaflex" target="_blank">Telegram</a>
+                    <a href="https://twitter.com/neforward" target="_blank">Twitter</a>
+                    <a href="https://github.com/neforward" target="_blank">GitHub</a>
                   </div>
                 </div>
               </div>

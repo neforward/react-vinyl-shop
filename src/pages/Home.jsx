@@ -6,7 +6,9 @@ import ArrowTop from '../components/ArrowTop';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <>
             <Header />
@@ -20,7 +22,7 @@ const Home = () => {
                                 <p>Dive into a curated collection sourced from the depths of musical history, each vinyl record a masterpiece crafted by legendary artists and cherished by connoisseurs.</p>
                                 <Link to='/shop'>
                                     <div className="slide-btn">
-                                        <button>View More</button>
+                                        <button onClick={scrollToTop}>View More</button>
                                     </div>
                                 </Link>
                             </div>
@@ -34,7 +36,7 @@ const Home = () => {
                                 <p>Experience the subtle crackle and unique sonic tones of our vinyl collection, a true reflection of music's beauty and bounty. </p>
                                 <Link to='/shop'>
                                     <div className="slide-btn">
-                                        <button>View More</button>
+                                        <button onClick={scrollToTop}>View More</button>
                                     </div>
                                 </Link>
                                 <div className="jars">
@@ -83,7 +85,7 @@ const Home = () => {
                                 <h2>Crafted all vinyls with care by our skilled team of audiophiles for the ultimate sonic satisfaction.</h2>
                                 <Link to='/shop'>
                                     <div className="slide-btn">
-                                        <button>View More</button>
+                                        <button onClick={scrollToTop}>View More</button>
                                     </div>
                                 </Link>
                             </div>

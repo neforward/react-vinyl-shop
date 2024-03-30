@@ -38,7 +38,7 @@ export const vinylsSlice = createSlice({
                 genre: 'Hip-Hop/Rap',
                 artist: 'Kanye West',
                 imgUrl: "https://www.turntablelab.com/cdn/shop/products/kanye-collegedrop_1000x1000.jpg?v=1571262553",
-                hover:'https://www.turntablelab.com/cdn/shop/products/kanye-collegedrop2_1200x1200.jpg?v=1571262553',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/kanye-collegedrop2_1200x1200.jpg?v=1571262553',
                 title: "The College Dropout",
                 price: "27.99",
                 id: 3,
@@ -559,7 +559,8 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Pop',
                 artist: 'Drake',
-                imgUrl: 'https://thesoundofvinyl.com/cdn/shop/products/SharedImage-115160.png?v=1700580092',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/drake-views-blackvinyl-1_1800x1800.jpg?v=1653509309',
+                hover:'https://www.turntablelab.com/cdn/shop/products/drake-views-blackvinyl-2_1800x1800.jpg?v=1653509310',
                 title: 'views',
                 price: '45.99',
                 id: 51,
@@ -637,7 +638,8 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Outkast',
-                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/ATLIENS_1024x1024.png?v=1668638715',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/outkast-atliens_82edcb0e-0b4a-4a67-aa4f-89e73ff2a16f_2000x2000.jpg?v=1571262549',
+                hover: "https://www.turntablelab.com/cdn/shop/products/outkast-atliens1_2000x2000.jpg?v=1571262549",
                 title: 'atliens',
                 price: '48.99',
                 id: 58,
@@ -646,11 +648,22 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Outkast',
-                imgUrl: 'https://sound-merch.com.au/cdn/shop/products/Outkaststankonia_1024x1024.png?v=1622786992',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/outkast-stankonia-vinyl-1_1800x1800.jpg?v=1591640806',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/outkast-stankonia-vinyl-2_1800x1800.jpg?v=1591640806',
                 title: 'stankonia',
                 price: '45.99',
                 id: 59,
                 des: `Stankonia is the fourth studio album by the American hip hop duo Outkast. It was released on October 31, 2000, by LaFace Records. The album was recorded in the duo's recently purchased Atlanta recording facility Stankonia Studios, which allowed for fewer time and recording constraints, and featured production work from Earthtone III (a production team consisting of Outkast and Mr. DJ) and Organized Noize. For the follow-up to their 1998 album Aquemini, the duo worked to create an expansive and experimental musical aesthetic, incorporating a diverse array of styles including funk, rave music, psychedelia, gospel, and rock within a Dirty South-oriented hip hop context.[1] During the recording sessions, André 3000 began moving beyond traditional rapping in favor of a more melodic vocal style, an approach to which Big Boi and several other producers were initially unaccustomed. Lyrically, the duo touched upon a wide range of subject matter, including sexuality, politics, misogyny, African-American culture, parenthood, and introspection. Stankonia featured appearances from a variety of local musicians discovered by the group while they were visiting clubs in their native city of Atlanta, Georgia`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Outkast',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/outkast-aquemini-vinyl-1_1800x1800.jpg?v=1591640930',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/outkast-aquemini-vinyl-3_1800x1800.jpg?v=1591640933',
+                title: 'Aquemini',
+                price: '34.50',
+                id: 790,
+                des: 'BEFORE TO PIMP A BUTTERFLY, THERE WAS AQUEMINI. On their third album, Outkast steer the soulful boom-bap of their first two records further south, helping to usher the nascent country-fried trap sound of the dirty south into the mainstream. With production duties split between Organized Noise & ‘Kast themselves, elements of soul, jazz, gospel and electro are chucked in to a funky stew of 808s and live instrumentation, laying the foundation for some of Big Boi & Andre’s best songs ever. The player and the poet are on ten, trading bars about spirituality, race, drugs, poverty, ‘Lac grills and trapping. Featuring a now legendary collab with Raekwon (check them all crammed in the booth together trading darts at the end of “Rosa Parks,” pre high-speed internet collabs just hit different), plus guest turns from George Clinton, Erykah Badu & most of the Dungeon Family, not to mention some of the most hilarious and bizarre rap skits of all time. Spread across 3 LPs and clocking in at nearly 75 minutes without a single bad song (no, not even “Mamacita”). Recommended.'
             },
             {
                 genre: 'Alternative',
@@ -742,8 +755,9 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Future',
-                imgUrl: 'https://futureofficial.shop/cdn/shop/products/INEVERLIKEDYOULIMITEDEDITIONVINYL-BUTTERCREAM_530x@2x.png?v=1675460280',
-                title: 'I NEVER LIKED YOU',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/future-hndrxx_2000x2000.jpg?v=1571265163',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/future-hndrxx1_2000x2000.jpg?v=1571265163',
+                title: 'HNDRXX',
                 price: '55.99',
                 id: 67,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
@@ -751,8 +765,19 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'Future',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/future-future_2000x2000.jpg?v=1571265163',
+                hover: "https://www.turntablelab.com/cdn/shop/products/future-future1_2000x2000.jpg?v=1571265163",
+                title: 'Future',
+                price: '45.60',
+                id: 9012,
+                des: `FUTURE STAYS WORKING. Future, the 5th studio album from the ATL rapper, is part one of the one-two punch he delivered (HNDRXX dropped only a week after) in 2017, and just as the eponymous title suggests, the LP is a look into the Freebandz honcho, his alter egos and all. "Mask Off" (the remix featuring Kendrick Lamar is also on here) is the obvious standout from the 20 tracker, as Future opens up about his drug use (not that he's NOT been vocal about this) and past over the Tommy Butler-sampling beat courtesy of Metro Boomin. "Super Trapper" is a super flex; his influence is undeniable, and this is the Super Future persona shining through. "Draco" refers to a modified AK-47 assault rifle, and in the song, he fires off at anyone that has/might cross him. "Used to This" with Drake is a celebration record; the two trade bars over a Zaytoven beat, and they're basically saying, "what a time to be alive." "I'm So Groovy" reminds people he's put in work since the Pluto days to become the superstar that he is.`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'Future',
                 imgUrl: 'https://sound-merch.com.au/cdn/shop/products/future_1024x1024.png?v=1625466052',
-                title: 'High Off',
+                hover: 'https://comebackvinyl.com/cdn/shop/products/2879cc86a20b5e72af9b7c4c608e61b0.jpg?v=1660887779',
+                title: 'High Off Life',
                 price: '34.99',
                 id: 68,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
@@ -769,7 +794,7 @@ export const vinylsSlice = createSlice({
                 genre: 'Hip-Hop/Rap',
                 artist: 'Young Thug',
                 imgUrl: 'https://www.turntablelab.com/cdn/shop/products/youngthug-jeffrey_2000x2000.jpg?v=1571264775',
-                hover:'https://www.turntablelab.com/cdn/shop/products/youngthug-jeffrey1_2000x2000.jpg?v=1571264775',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/youngthug-jeffrey1_2000x2000.jpg?v=1571264775',
                 title: 'jeffery',
                 price: '99.99',
                 id: 70,
@@ -797,7 +822,8 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'MF DOOM',
-                imgUrl: 'https://cdn.shopify.com/s/files/1/0043/7105/4710/files/madvillany-hhv-final-01_400x.png',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/madvillain-madvillainy-1_2000x2000.jpg?v=1640114534',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/madvillain-madvillainy2_934ba934-10db-4e26-85aa-c0deb86feeca_2000x2000.jpg?v=1640114534',
                 title: 'Madvillainy',
                 price: '67.99',
                 id: 73,
@@ -811,7 +837,8 @@ export const vinylsSlice = createSlice({
                 price: '44.99',
                 id: 74,
                 des: ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet laboriosam voluptas reprehenderit, omnis, porro ipsum tenetur odit voluptate, tempora quaerat blanditiis iste rerum doloribus? Modi nostrum architecto officia sunt corrupti.'
-            }, {
+            },
+            {
                 genre: 'Hip-Hop/Rap',
                 artist: 'DaBaby',
                 imgUrl: 'https://interscope.com/cdn/shop/files/updatedLP_1024x1024.png?v=1709318786',
@@ -820,7 +847,8 @@ export const vinylsSlice = createSlice({
                 id: 75,
                 des: 'LEEEEEEEEEEEEEEEESSSSSSSSSSS GGGGGOOOOOOOOOO'
 
-            }, {
+            },
+            {
                 genre: 'Hip-Hop/Rap',
                 artist: 'ScHoolboy Q',
                 imgUrl: 'https://interscope.com/cdn/shop/files/vinylmockup_1024x1024.png?v=1708098431',
@@ -830,9 +858,20 @@ export const vinylsSlice = createSlice({
                 des: 'havent listened yet neforward'
             },
             {
+                genre: 'Hip-Hop/Rap',
+                artist: 'MF DOOM',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/mfdoom-mmfood-pinkgreenvinyl-1_1800x1800.jpg?v=1597172467',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/mfdoom-mmfood-pinkgreenvinyl-2_1800x1800.jpg?v=1597172467',
+                title: 'MM..Food',
+                price: '55.98',
+                id: 92034,
+                des: 'Dooom',
+            },
+            {
                 genre: 'Alternative',
                 artist: 'Tame Impala',
-                imgUrl: 'https://interscope.com/cdn/shop/files/TameImpala_Currents_2LP_01_1_1024x1024.jpg?v=1701193896',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/products/tameimpala-currentsblk_1600x1600.jpg?v=1571264355',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/tameimpala-currentsblk2_1600x1600.jpg?v=1571264355',
                 title: 'Currents',
                 price: '370.00',
                 id: 77,
@@ -879,7 +918,7 @@ export const vinylsSlice = createSlice({
                 genre: 'Hip-Hop/Rap',
                 artist: 'Earl Sweatshirt',
                 imgUrl: 'https://www.turntablelab.com/cdn/shop/files/earlsweathsirt-somerapsongs-blackvinyl-1_1800x1800.jpg?v=1710537750',
-                hover:"https://www.turntablelab.com/cdn/shop/files/earlsweathsirt-somerapsongs-blackvinyl-2_1800x1800.jpg?v=1710537751",
+                hover: "https://www.turntablelab.com/cdn/shop/files/earlsweathsirt-somerapsongs-blackvinyl-2_1800x1800.jpg?v=1710537751",
                 title: 'Some Rap Songs',
                 price: '45.67',
                 id: 82,
@@ -937,12 +976,24 @@ export const vinylsSlice = createSlice({
             {
                 genre: 'Hip-Hop/Rap',
                 artist: 'JPEGMAFIA',
-                imgUrl: 'https://freight.cargo.site/t/original/i/cdcd4dc9b3cdc32158302c414b5e3913e0e0d21d06c78006acd9e1af62847caf/JPEGMAFIA_LP-3.png',
-                title: 'LP!',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/files/jpegbrown-scaring-coloredvinyl-1_1800x1800.jpg?v=1702050034',
+                hover: 'https://www.turntablelab.com/cdn/shop/files/jpegbrown-scaring-coloredvinyl-2_1800x1800.jpg?v=1702050033',
+                title: 'Scaring The Hoes',
                 price: '39.89',
                 id: 88,
+                des: `"For about a year i practiced with the SP-404. im proud that i got to make some fire shit from the time i spent with this machine & my favorite rapper. You can call this a practice session. This is what we would sound like in the 90s with no pro tools. Im done using the 404 now." - JPEGMAFIA`
+            },
+            {
+                genre: 'Hip-Hop/Rap',
+                artist: 'JPEGMAFIA',
+                imgUrl: 'https://www.turntablelab.com/cdn/shop/files/jpeg-ghostpop-whitevinyl-1_1800x1800.jpg?v=1710441171',
+                hover: 'https://www.turntablelab.com/cdn/shop/files/jpeg-ghostpop-whitevinyl-2_1800x1800.jpg?v=1710441172',
+                title: 'ghost pop',
+                price: '45.60',
+                id: 532,
                 des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
             }
+
             ,
             {
                 genre: 'Hip-Hop/Rap',
@@ -952,16 +1003,6 @@ export const vinylsSlice = createSlice({
                 title: 'Lil Uzi Vert Vs. The World',
                 price: '20.95',
                 id: 89,
-                des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
-            },
-
-            {
-                genre: 'Hip-Hop/Rap',
-                artist: '2pac',
-                imgUrl: 'https://recordstore.co.uk/cdn/shop/products/SharedImage-141499_f24e8d6b-1e4d-484e-85c0-b016300ea7fd.png?v=1700574185',
-                title: 'All Eyez On Me',
-                price: '37.80',
-                id: 93,
                 des: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at dolores accusamus distinctio perspiciatis optio quidem ipsam, excepturi expedita pariatur, delectus architecto dicta iure nulla dolorem sunt illum? Rem, debitis?`
             },
             {
@@ -988,7 +1029,7 @@ export const vinylsSlice = createSlice({
                 genre: 'Hip-Hop/Rap',
                 artist: 'jaden smith',
                 imgUrl: 'https://www.turntablelab.com/cdn/shop/products/jadensmith-syre_2000x2000.jpg?v=1571265331',
-                hover:'https://www.turntablelab.com/cdn/shop/products/jadensmith-syre1_2000x2000.jpg?v=1571265331',
+                hover: 'https://www.turntablelab.com/cdn/shop/products/jadensmith-syre1_2000x2000.jpg?v=1571265331',
                 title: 'syre',
                 price: '21.30',
                 id: 96,
