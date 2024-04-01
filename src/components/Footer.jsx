@@ -15,7 +15,7 @@ const Footer = () => {
                                 <h2>GET IN TOUCH</h2>
                                 <span>1600 Vinyl Avenue, Brooklyn, NY 11201</span>
                                 <span>+39 344 199 8286 </span>
-                                <span>info@vinylhead.com</span>
+                                <span>© NEFORWARD. All rights reserved.</span>
                                 <span>SHOW ON MAP</span>
                             </div>
                             <div className="third-footer-column">

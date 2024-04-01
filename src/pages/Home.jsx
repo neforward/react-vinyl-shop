@@ -105,7 +105,7 @@ const Home = () => {
                                 <div className="spans">
                                     <span>1600 Vinyl Avenue, Brooklyn, NY 11201</span>
                                     <span>+996 550 205-988</span>
-                                    <span>info@vinylhead.com</span>
+                                    <span>© NEFORWARD. All rights reserved.</span>
                                 </div>
                             </div>
                             <div className="slide-beymaral">

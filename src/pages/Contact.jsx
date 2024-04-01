@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import ArrowTop from "../components/ArrowTop"
 const Contact = () => {
     return (
-        <> 
+        <>
             <HeaderMain />
             <div className="contact">
                 <div className="main-container">
@@ -17,7 +17,7 @@ const Contact = () => {
                                 <h6>Contact</h6>
                                 <span>1600 Vinyl Avenue, Brooklyn, NY 11201</span>
                                 <span>+996 550 205-988</span>
-                                <span>info@vinylhead.com</span>
+                                <span>© NEFORWARD. All rights reserved.</span>
                             </div>
                             <div className="first-side-btn">
                                 <button>GET DIRECTION</button>
